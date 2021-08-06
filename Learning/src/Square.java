@@ -1,10 +1,12 @@
 import java.util.Scanner;
-public class ploshad {
+
+public class Square {
     public static void main(String[] args) {
         Scanner name = new Scanner(System.in);
+        String figura = new String ();
         do {
             System.out.println("Площадь какой фигуры вы хотите рассчитать");
-            String figura = name.nextLine();
+          figura = name.nextLine();
             switch (figura) {
                 case "треугольник":
                     System.out.println("основание треугольника равно");
@@ -12,13 +14,13 @@ public class ploshad {
                     System.out.println("высота треугольника равна");
                     int h = name.nextInt();
                     int s = (a * h) / 2;
-                    System.out.println("площадь треугольника равна" + s);
+                    System.out.println("площадь треугольника равна " + s);
                     break;
                 case "квадрат":
                     System.out.println("сторона квадрата равна");
                     int c = name.nextInt();
                     int pl = c ^ 2;
-                    System.out.println("площадь квадрата равна" + pl);
+                    System.out.println("площадь квадрата равна " + pl);
                     break;
                 case "прямоугольник":
                     System.out.println("длина прямоугольника равна");
@@ -26,21 +28,17 @@ public class ploshad {
                     System.out.println("ширина прямоугольника равна");
                     int m = name.nextInt();
                     int plos = n * m;
-                    System.out.println("площадь прямоугольника равен" + plos);
+                    System.out.println("площадь прямоугольника равен " + plos);
                     break;
                 case "круг":
-                    System.out.println("адиус круга равен");
+                    System.out.println("радиус круга равен");
                     double r = name.nextInt();
                     double plosh = 3.14 * r * r;
-                    System.out.println("площадь круга равна" + plosh);
-                    break;
-                case "не хочу больше":
-                    System.out.println("На сегодня хватит");
-                    String topslovo = name.nextLine();
+                    System.out.println("площадь круга равна " + plosh);
                     break;
             }
-            while (!figura.equals("стоп")) ;
-            System.out.println("Всего доброго");
         }
+        while (!figura.equals("стоп"));
+        System.out.println("Всего доброго");
     }
 }
