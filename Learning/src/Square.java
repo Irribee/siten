@@ -19,7 +19,7 @@ public class Square {
                 case "квадрат":
                     System.out.println("сторона квадрата равна");
                     int c = name.nextInt();
-                    int pl = c ^ 2;
+                    int pl = c^2;
                     System.out.println("площадь квадрата равна " + pl);
                     break;
                 case "прямоугольник":
@@ -38,7 +38,7 @@ public class Square {
                     break;
             }
         }
-        while (!figura.equals("стоп"));
+        while (!figura.equals("stop"));
         System.out.println("Всего доброго");
     }
 }
