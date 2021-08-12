@@ -4,8 +4,8 @@ public class MassivMinimum {
     public static void main(String[] args) {
         int[] massivMin = {6, 18, 3, 76, 2, 32, 14};
         int i=0;
-        int p=massivMin.length-1;
-        for (p=massivMin.length-1;p>i; p++) {
+        int p=0;
+        for (p=0;p<massivMin.length; p++) {
             for (i = 0; i < massivMin.length; i++) {
                 if (i + 1 == massivMin.length) {
                     break;
