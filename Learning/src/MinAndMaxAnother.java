@@ -6,20 +6,19 @@ public class MinAndMaxAnother {
         System.out.println("Enter a number (no more than 2 billion)");
         String number = s.nextLine();
         char[] mas = number.toCharArray();
-        int min = mas[0];
-        int max = mas[0];
+        char min = mas[0];
+        char max = mas[0];
         for (int i = 0; i < mas.length; i++) {
             if (min > mas[i]) {
                 min = mas[i];
             }
             if (max < mas[i]) {
                 max = mas[i];
-                //maxi = Integer.parseInt(String.valueOf(max));
             }
         }
-        String myStr = Character.toString(max);;;
+        String myStr = String.valueOf(max);
             int maxi = Integer.parseInt(String.valueOf(myStr));
-        String myStr1 = Character.toString(min);;
+        String myStr1 = Character.toString(min);
         int mini = Integer.parseInt(String.valueOf(myStr1));
         System.out.println("the maximum digit of your number " + maxi);
         System.out.println("the minimum digit of your number " + mini);
