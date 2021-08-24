@@ -7,12 +7,35 @@ public class SubstrInString {
         String string = scan.nextLine();
         System.out.println("Enter a substring 2");
         String subst = scan.nextLine();
-        int k = string.indexOf(subst);
-        if (k > 0) {
-            System.out.println("true");
+        char[] str = string.toCharArray();
+        char[] sub = subst.toCharArray();
+        int i;
+        int k;
+        int t;
+        for (i = 0; i < str.length; i++) {
+            if (str[i] != sub[0]){
+                continue;
+            }
+            else if (str[i] == sub[0]) {
+                t = 1;
+                i++;
+                for (k = 1; k < sub.length; k++) {
+                    if (str[i] != sub[k]) {
+                        continue;
+                    } else if (str[i] == sub[k]) {//нужно сделать так, чтобы не только K++ был, но и i++
+                        t++;
+                        i++;//?
+                    }
+                }
+                if (t == sub.length) {
+                    System.out.println("true");
+                }
+            }
         }
-        if (k < 0) {
+        if (i==str.length){
             System.out.println("false");
         }
     }
 }
+
+
