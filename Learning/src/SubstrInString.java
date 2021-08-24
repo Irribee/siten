@@ -11,29 +11,29 @@ public class SubstrInString {
         char[] sub = subst.toCharArray();
         int i;
         int k;
-        int t;
+        int t = 0;
         for (i = 0; i < str.length; i++) {
-            if (str[i] != sub[0]){
+            if (str[i] != sub[0]) {
                 continue;
-            }
-            else if (str[i] == sub[0]) {
+            } else if (str[i] == sub[0]) {
                 t = 1;
                 i++;
                 for (k = 1; k < sub.length; k++) {
                     if (str[i] != sub[k]) {
                         continue;
-                    } else if (str[i] == sub[k]) {//нужно сделать так, чтобы не только K++ был, но и i++
+                    } else if (str[i] == sub[k]) {
                         t++;
-                        i++;//?
+                        i++;
                     }
                 }
                 if (t == sub.length) {
                     System.out.println("true");
                 }
+                if (t == 0) {
+                    System.out.println("false");
+                }
+
             }
-        }
-        if (i==str.length){
-            System.out.println("false");
         }
     }
 }
