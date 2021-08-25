@@ -32,7 +32,6 @@ public class SubstrInString {
                 if (t == 0) {
                     System.out.println("false");
                 }
-
             }
         }
     }
