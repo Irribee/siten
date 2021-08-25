@@ -26,13 +26,13 @@ public class SubstrInString {
                         i++;
                     }
                 }
-                if (t == sub.length) {
-                    System.out.println("true");
-                }
-                if (t == 0) {
-                    System.out.println("false");
-                }
             }
+        }
+        if (t == sub.length) {
+            System.out.println("true");
+        }
+        if (t != sub.length) {
+            System.out.println("false");
         }
     }
 }
