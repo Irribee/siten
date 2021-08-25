@@ -16,7 +16,7 @@ public class SubstrInString {
             if (str[i] != sub[0]) {
                 continue;
             } else if (str[i] == sub[0]) {
-                t = 1;
+                t ++;
                 i++;
                 for (k = 1; k < sub.length; k++) {
                     if (str[i] != sub[k]) {
@@ -28,10 +28,10 @@ public class SubstrInString {
                 }
             }
         }
-        if (t == sub.length) {
+        if (t >= sub.length) {
             System.out.println("true");
         }
-        if (t != sub.length) {
+        if (t < sub.length) {
             System.out.println("false");
         }
     }
