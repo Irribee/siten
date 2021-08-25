@@ -16,7 +16,7 @@ public class SubstrInString {
             if (str[i] != sub[0]) {
                 continue;
             } else if (str[i] == sub[0]) {
-                t ++;
+                t++;
                 i++;
                 for (k = 1; k < sub.length; k++) {
                     if (str[i] != sub[k]) {
