@@ -13,7 +13,6 @@ public class SubstrInString {
         int k;
         int t = 0;
         for (i = 0; i < str.length; i++) {
-
             if (str[i] != sub[0]) {
                 continue;
             } else if (str[i] == sub[0]) {
@@ -22,7 +21,10 @@ public class SubstrInString {
                 for (k = 1; k < sub.length; k++)
                     if (str[i] != sub[k]) {
                         i--;
-                        continue;
+                        t = 0;
+                        break;
+                    } else if (i + 1 == str.length) {
+                        break;
                     } else if (str[i] == sub[k]) {
                         t++;
                         i++;
