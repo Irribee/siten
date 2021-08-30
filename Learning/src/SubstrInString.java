@@ -23,8 +23,7 @@ public class SubstrInString {
                 for (k = 1; k < sub.length; k++) {
                     if (i == str.length) {
                         break;
-                    }
-                    else if (str[i] != sub[k]) {
+                    } else if (str[i] != sub[k]) {
                         i--;
                         t = 0;
                         break;
