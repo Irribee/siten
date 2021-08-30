@@ -15,20 +15,24 @@ public class SubstrInString {
         for (i = 0; i < str.length; i++) {
             if (str[i] != sub[0]) {
                 continue;
+            } else if (i + 1 == str.length) {
+                break;
             } else if (str[i] == sub[0]) {
                 t++;
                 i++;
-                for (k = 1; k < sub.length; k++)
-                    if (str[i] != sub[k]) {
+                for (k = 1; k < sub.length; k++) {
+                    if (i == str.length) {
+                        break;
+                    }
+                    else if (str[i] != sub[k]) {
                         i--;
                         t = 0;
-                        break;
-                    } else if (i + 1 == str.length) {
                         break;
                     } else if (str[i] == sub[k]) {
                         t++;
                         i++;
                     }
+                }
             }
         }
         if (t >= sub.length) {
@@ -39,5 +43,6 @@ public class SubstrInString {
         }
     }
 }
+
 
 
