@@ -24,8 +24,8 @@ public class SubstrInString {
                     if (i == str.length) {
                         break;
                     } else if (str[i] != sub[k]) {
-                        i--;
-                        t = 0;
+                        t=0;
+                        i=i-k;
                         break;
                     } else if (str[i] == sub[k]) {
                         t++;
