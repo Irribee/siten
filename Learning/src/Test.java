@@ -1,9 +1,11 @@
 public class Test {
     public static void main(String[] args) {
         SubInStr element1 = new SubInStr();
-        element1.substringInString("Hello", "lo");
+        if (element1.substringInString("Hello", "lo"))
+            System.out.println("false");
         SubInStr element2 = new SubInStr();
-        element2.substringInString("Hello", "lo");
+        if (element2.substringInString("Hello", "lo"))
+            System.out.println("true");
         }
     }
         class SubInStr {
