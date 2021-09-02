@@ -2,9 +2,9 @@ public class Test {
     public static void main(String[] args) {
         SubInStr element1 = new SubInStr();
         if (element1.substringInString("Hello", "lo"))
-            System.out.println("false");
+            System.out.println("true");
         SubInStr element2 = new SubInStr();
-        if (element2.substringInString("Hello", "lo"))
+        if (element2.substringInString("Hello", "ww"))
             System.out.println("true");
         }
     }
