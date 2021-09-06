@@ -9,18 +9,18 @@ public class BalanceBrackets {
         int i;
         int k = 0;
         for (i = 0; i < brackets.length; i++) {
-            switch (string) {
-                case "{":
+            switch (brackets[i]) {
+                case '{':
                     k++;
                     break;
-                case "}":
+                case '}':
                     k--;
                     break;
             }
         }
         if (k == 0) {
             System.out.println("true");
-        } else {
+        } else if (k != 0) {
             System.out.println("false");
         }
     }
