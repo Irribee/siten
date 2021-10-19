@@ -96,21 +96,24 @@ public class Array_2 {
 //    twoTwo([2, 2, 4]) → true
 //    twoTwo([2, 2, 4, 2]) → false
     public boolean twoTwo(int[] nums) {
-        boolean answer = true;
-        for (int i = 0; i < nums.length - 1; i++) {
-            if (nums.length == 1 && nums[i] == 2) {
-                answer = false;
-            } else if (nums[i] == 2 && nums[i + 1] == 2) {
-                -так же только с i -1, чтоб не выходило за пределы.
-                answer = true;
-                i++;
-            } else if (nums[nums.length - 1] != 2) {
-                answer = true;
-            } else {
-                answer = false;
+        for (int i=1;i<nums.length-1;i++){
+            if (nums[i]==2 && nums[i+1]!=2 && nums[i-1]!=2) {
+                return false;
             }
         }
-        return answer;
+        if(nums.length==1 && nums[0]==2){
+            return false;
+        }
+        else if (nums.length>1 && nums[nums.length-1]==2 && nums[nums.length-2]!=2) {
+            return false;
+        }
+        else{
+            return true;
+        }
     }
 
+
+
 }
+
+
