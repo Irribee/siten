@@ -91,19 +91,20 @@ public class Logic_2 {
 //    makeChocolate(4, 1, 10) → -1
 //    makeChocolate(4, 1, 7) → 2
     public int makeChocolate(int small, int big, int goal) {
-        int n = goal / 5;
-        if (small > 5 && goal % 10 != 0 && goal - (5 * n) <= small && (n >= big || goal - 5 * big >= small)) {
-            return goal - 5 * big;
+        int bigBars=goal/5;
+        if(goal-big*5-small>0) {
+            return -1;
         }
-        if (small < 5 && goal % 10 != 0 && goal - (5 * n) <= small && (n >= big || goal - 5 * big >= small)) {
-            return goal - 5 * n;
+        else if(small<5 && bigBars<=big && goal-bigBars*5<=small){
+            return goal-bigBars*5;
         }
-        if (goal % 10 == 0 && small < 5 && goal - 5 * big - small <= 0 && (n <= big || goal - 5 * big == 0)) {
-            return goal - 5 * n;
+        else if(small>=5 && big*5>goal){
+            return goal-bigBars*5;
         }
-        if (goal % 10 == 0 && small > 5 && goal - (5 * big) - small <= 0 && (n >= big || goal - 5 * big == 0)) {
-            return goal - 5 * big;
-        } else {
+        else if(small>=5 && big*5<=goal){
+            return goal-big*5;
+        }
+        else{
             return -1;
         }
     }
