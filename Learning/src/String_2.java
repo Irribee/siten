@@ -96,16 +96,19 @@ public class String_2 {
 //    plusOut("12xy34", "1") → "1+++++"
 //    plusOut("12xy34xyabcxy", "xy") → "++xy++xy+++xy"
     public String plusOut(String str, String word) {
-        String sub = "";
-        String prom = "";
-        for (int i = 0; i < str.length(); i++) {
-            if (str.substring(i, word.length() + 1).equals(word)) {
-                prom = str.substring(0, i + 1);
-                sub += prom + str.substring(word.length(), str.length() - 1);
+        String sub="";
+        for (int i=0;i<str.length()+1; i++){
+            if(i<=str.length()-word.length() && str.substring(i,i+word.length()).equals(word)){
+                sub+=word;
+                i+=word.length();
+            }
+            else{
+                sub+="+";
             }
         }
         return sub;
     }
+
 
 
 }
