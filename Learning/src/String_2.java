@@ -77,7 +77,7 @@ public class String_2 {
     public String wordEnds(String str, String word) {
         int k = word.length();
         String end = "";
-        for (int i = 0; i < str.length() - k + 1; i++) {
+        for (int i = 0; i < str.length() - k; i++) {
             if (i == 0 && str.substring(i, i + k).equals(word)) {
                 end = str.substring(i + k, i + k + 1);
             }
