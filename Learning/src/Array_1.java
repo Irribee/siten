@@ -21,18 +21,20 @@ public class Array_1 {
 
         //arr1, arr2, length, где length(int len) не обязательно 2. Если length больше, чем размер первых 2 массивов, то в нем только эл-ты первого и второго.
         public int[] make2(int[] arr1, int[] arr2, int len) {
-            int[] arr3=new int[len];
-            for (int i=0,i<arr1.length; i++){
-                if (i < len) {
-                    arr3[i] = arr1[i];
+            int[] arr3 = new int[len];
+            int index = 0;
+            for (int i = 0, i<arr1.length;i++){
+                if (index<= len && i <= len) {
+                    arr3[index] = arr1[i];
                 }
+                index++;
             }
-            return arr3;
-                for (int i=0,i<arr2.length; i++){
-                    if(i<len){
-                        arr3[i]=arr1[i];
-                    }
+            for (int i = 0, i<arr2.length;i++){
+                if (index<= len && i <= len) {
+                    arr3[index] = arr2[i];
                 }
+                index++;
+            }
             return arr3;
         }
 //    Given an array of ints length 3, return an array with the elements "rotated left" so {1, 2, 3} yields {2, 3, 1}.
