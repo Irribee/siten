@@ -92,20 +92,20 @@ public class Logic_2 {
 //    makeChocolate(4, 1, 7) → 2
     public int makeChocolate(int small, int big, int goal) {
         int bigBars=goal/5;
+        int smallToUse = goal - bigBars * 5;
+        int smallMore5=goal - big * 5;
         if(goal-big*5-small>0) {
             return -1;
         }
-        else if(small<5 && bigBars<=big && goal-bigBars*5<=small){
-            return goal-bigBars*5;
+        else if(smallMore5 <= small && bigBars>big) {
+            return smallMore5;
         }
-        else if(small>=5 && big*5>goal){
-            return goal-bigBars*5;
-        }
-        else if(small>=5 && big*5<=goal){
-            return goal-big*5;
-        }
-        else{
+        else if(smallToUse > small) {
             return -1;
+        }
+
+        else {
+            return smallToUse;
         }
     }
 
