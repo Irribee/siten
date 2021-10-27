@@ -75,21 +75,21 @@ public class String_2 {
 //    wordEnds("XY123XY", "XY") → "13"
 //    wordEnds("XY1XY", "XY") → "11"
     public String wordEnds(String str, String word) {
-        int k = word.length();
-        String end = "";
-        for (int i = 0; i < str.length() - k; i++) {
-            if (i == 0 && str.substring(i, i + k).equals(word)) {
-                end = str.substring(i + k, i + k + 1);
+        int wLength=word.length();
+        int sLength=str.length();
+        String end="";
+        for (int i=0;i<str.length()-wLength+1;i++){
+            if (i>0 && str.substring(i,i+wLength).equals(word)){
+                end+=(str.substring(i-1,i));
             }
-            if (str.substring(i, i + k).equals(word)) {
-                end += (str.substring(i - 1, i)) + (str.substring(i + k, i + k + 1));
+            if (i<sLength-wLength && str.substring(i,i+wLength).equals(word)){
+                end+=str.substring(i+wLength,i+wLength+1);
             }
-            if (str.substring(i, str.length() - k + 1).equals(word)) {
-                end += (str.substring(i - 1, i));
-            }
+
         }
         return end;
     }
+
 
     //    Given a string and a non-empty word string, return a version of the original String where all chars have been replaced by pluses ("+"), except for appearances of the word string which are preserved unchanged.
 //    plusOut("12xy34", "xy") → "++xy++"
@@ -108,6 +108,44 @@ public class String_2 {
         }
         return sub;
     }
+
+
+    public String plusOut(String str, String word) {
+        String sub="";
+        int k=0;
+        for (int i=0;i<str.length(); i++){
+            if(i+1==str.length()){
+                break;
+            }
+            else if(str.charAt(i)!=word.charAt(0)){
+                sub+="+";
+            }
+            else{
+                i++;
+                k++;
+                for (int n=1;n<word.length(); n++){
+                    if(i==str.length()){
+                        break;
+                    }
+                    if(str.charAt(i)==word.charAt(n)){
+                        k++;
+                        i++;
+                    }
+                    else{
+                        k=0;
+                        i=i-n;
+                        break;
+                    }
+                    if(k>0){
+                        sub+=word;
+                        i+=word.length()-1;
+                    }
+                }
+            }
+        }
+        return sub;
+    }
+
 
 
 
