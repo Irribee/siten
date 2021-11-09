@@ -1,10 +1,27 @@
 import java.util.Scanner;
-
+public int[] make2(int[] arr1, int[] arr2, int len) {
+        int[] arr3 = new int[len];
+        int index = 0;
+        for (int i = 0, i<arr1.length - 1;i++){
+        if (i <= len) {
+        arr3[index] = arr1[i];
+        }
+        index++;
+        }
+        for (int i = 0, i<arr2.length - 1;i++){
+        if (i <= len) {
+        arr3[index] = arr2[i];
+        }
+        index++;
+        }
+        return arr3;
+        }
 public class popitka3 {
     public static void main(String[] args) {
         Scanner name = new Scanner(System.in);
-        System.out.println("Площадь какой фигуры вы хотите рассчитать");
-        String figura = name.nextLine();
+        System.out.println("введите первый массив");
+        int arr3 = name.nextInt();
+        int[] arr3 = new int[len];
         if (figura.equals("треугольник")) {
             System.out.println("введи основание треугольника и его высоту");
             int a = name.nextInt();
@@ -37,5 +54,5 @@ public class popitka3 {
             }
         }
     }
-}
+
 
