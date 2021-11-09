@@ -23,6 +23,8 @@ public class String_3 {
 
 
 
+
+
 //    We'll say that a lowercase 'g' in a string is "happy" if there is another 'g' immediately to its left or right. Return true if all the g's in the given string are happy.
 //
 //    gHappy("xxggxx") → true
@@ -34,20 +36,20 @@ public class String_3 {
         if (str.length()==1 && str.charAt(0)=='g'){
             answer=false;
         }
-        for (int i=0; i<str.length(); i++){
-            if (i<str.length()-1 && str.charAt(i)=='g' &&  str.charAt(i+1)=='g'){
-                answer=true;
-                i++;
-            }
-            else if (str.length()>0 && str.charAt(i)=='g' && str.charAt(i-1)=='g'){
-                answer=true;
-            }
-            else{
-                answer=false;
-            }
+        else if (str.length()>1 && str.charAt(str.length()-1)=='g' && str.charAt(str.length()-2)!='g'){
+            answer=false;
+        }
+        else{
+            answer=true;
+        }
+        for(int i = 1; i<str.length()-1; i++) {
+            if(str.charAt(i) == 'g' && str.charAt(i-1) != 'g' && str.charAt(i+1) != 'g')
+                return false;
         }
         return answer;
     }
+
+
 
 
 
