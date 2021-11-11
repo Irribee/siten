@@ -75,15 +75,15 @@ public class String_2 {
 //    wordEnds("XY123XY", "XY") → "13"
 //    wordEnds("XY1XY", "XY") → "11"
     public String wordEnds(String str, String word) {
-        int wLength=word.length();
-        int sLength=str.length();
-        String end="";
-        for (int i=0;i<str.length()-wLength+1;i++){
-            if (i>0 && str.substring(i,i+wLength).equals(word)){
-                end+=(str.substring(i-1,i));
+        int wLength = word.length();
+        int sLength = str.length();
+        String end = "";
+        for (int i = 0; i < str.length() - wLength + 1; i++) {
+            if (i > 0 && str.substring(i, i + wLength).equals(word)) {
+                end += (str.substring(i - 1, i));
             }
-            if (i<sLength-wLength && str.substring(i,i+wLength).equals(word)){
-                end+=str.substring(i+wLength,i+wLength+1);
+            if (i < sLength - wLength && str.substring(i, i + wLength).equals(word)) {
+                end += str.substring(i + wLength, i + wLength + 1);
             }
 
         }
@@ -96,14 +96,13 @@ public class String_2 {
 //    plusOut("12xy34", "1") → "1+++++"
 //    plusOut("12xy34xyabcxy", "xy") → "++xy++xy+++xy"
     public String plusOut(String str, String word) {
-        String sub="";
-        for (int i=0;i<str.length()+1; i++){
-            if(i<=str.length()-word.length() && str.substring(i,i+word.length()).equals(word)){
-                sub+=word;
-                i+=word.length();
-            }
-            else{
-                sub+="+";
+        String sub = "";
+        for (int i = 0; i < str.length() + 1; i++) {
+            if (i <= str.length() - word.length() && str.substring(i, i + word.length()).equals(word)) {
+                sub += word;
+                i += word.length();
+            } else {
+                sub += "+";
             }
         }
         return sub;
@@ -111,42 +110,37 @@ public class String_2 {
 
 
     public String plusOut(String str, String word) {
-        String sub="";
-        int k=0;
-        for (int i=0;i<str.length(); i++){
-            if(i+1==str.length()){
-                break;
-            }
-            else if(str.charAt(i)!=word.charAt(0)){
-                sub+="+";
-            }
-            else{
+        String sub = "";
+        int k = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) != word.charAt(0)) {
+                sub += "+";
+            } else {
                 i++;
                 k++;
-                for (int n=1;n<word.length(); n++){
-                    if(i==str.length()){
+                for (int n = 1; n < word.length(); n++) {
+                    if (i == str.length()) {
                         break;
                     }
-                    if(str.charAt(i)==word.charAt(n)){
+                    if (str.charAt(i) == word.charAt(n)) {
                         k++;
                         i++;
-                    }
-                    else{
-                        k=0;
-                        i=i-n;
+                    } else {
+                        k = 0;
+                        i = i - n;
+                        sub += "+";
                         break;
                     }
-                    if(k>0){
-                        sub+=word;
-                        i+=word.length()-1;
-                    }
+                }
+                if (k == word.length()) {
+                    sub += word;
+                    i--;
+                    k = 0;
                 }
             }
         }
         return sub;
     }
-
-
 
 
 }
