@@ -37,14 +37,22 @@ public class Array_3 {
         int sumLeft = 0;
         int sumRight = 0;
         int i = 0;
+        int j = nums.length - 1;
         for (i = 0; i < nums.length; i++) {
-            sumLeft += nums[i];
-            for (int j = nums.length - 1; j > i; j--) {
-                sumRight += nums[j];
-                if (sumLeft == sumRight) {
-                    answer = true;
+            if (i >= j) {
+                break;
+            }
+            if (sumLeft < sumRight) {
+                continue;
+            } else {
+                sumLeft += nums[i];
+                for (j = nums.length - 1; j > i; j--) {
+                    sumRight += nums[j];
                 }
             }
+        }
+        if (sumLeft == sumRight) {
+            answer = true;
         }
         return answer;
     }
