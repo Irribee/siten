@@ -33,27 +33,35 @@ public class Array_3 {
 //    canBalance([10, 10]) → true
 
     public boolean canBalance(int[] nums) {
-        boolean answer = false;
-        int sumLeft = 0;
-        int sumRight = 0;
-        int i = 0;
-        int j = nums.length - 1;
-        for (i = 0; i < nums.length; i++) {
-            if (i >= j) {
+        boolean answer=false;
+        int  sumLeft=0;
+        int  sumRight=0;
+        int i=0;
+        int j=nums.length-1;
+        for (i=0;i<nums.length;i++){
+            if (i>=j){
                 break;
             }
-            if (sumLeft < sumRight) {
+            if (sumLeft<sumRight){
                 continue;
-            } else {
-                sumLeft += nums[i];
-                for (j = nums.length - 1; j > i; j--) {
-                    sumRight += nums[j];
+            }
+            else{
+                sumLeft+=nums[i];
+                for (j=nums.length-1;j>i;j--){
+                    if(sumLeft>sumRight){
+                        sumRight+=nums[j];
+                    }
+                    else{
+                        break;
+                    }
                 }
             }
+
         }
-        if (sumLeft == sumRight) {
-            answer = true;
+        if (sumLeft==sumRight){
+            answer= true;
         }
+
         return answer;
     }
 
