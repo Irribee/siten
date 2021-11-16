@@ -63,5 +63,57 @@ public class String_3 {
         return longSub;
     }
 
+//    Given a string, return the sum of the numbers appearing in the string, ignoring all other characters. A number is a series of 1 or more digit chars in a row. (Note: Character.isDigit(char) tests if a char is one of the chars '0', '1', .. '9'. Integer.parseInt(string) converts a string to an int.)
+//
+//    sumNumbers("abc123xyz") → 123
+//    sumNumbers("aa11b33") → 44
+//    sumNumbers("7 11") → 18
+
+
+
+
+//    Given two strings, base and remove, return a version of the base string where all instances of the remove string have been removed (not case sensitive). You may assume that the remove string is length 1 or more. Remove only non-overlapping instances, so with "xxx" removing "xx" leaves "x".
+//
+//    withoutString("Hello there", "llo") → "He there"
+//    withoutString("Hello there", "e") → "Hllo thr"
+//    withoutString("Hello there", "x") → "Hello there"
+
+
+
+
+//    We'll say that a "triple" in a string is a char appearing three times in a row. Return the number of triples in the given string. The triples may overlap.
+//
+//    countTriple("abcXXXabc") → 1
+//    countTriple("xxxabyyyycd") → 3
+//    countTriple("a") → 0
+
+
+
+
+
+//    Given a string, look for a mirror image (backwards) string at both the beginning and end of the given string. In other words, zero or more characters at the very begining of the given string, and at the very end of the string in reverse order (possibly overlapping). For example, the string "abXYZba" has the mirror end "ab".
+//
+//    mirrorEnds("abXYZba") → "ab"
+//    mirrorEnds("abca") → "a"
+//    mirrorEnds("aba") → "aba"
+public String mirrorEnds(String string) {
+    String halfstr=string.substring(0,string.length()/2);
+    String mirr="";
+    String str1="";
+    for(int i=0;i<string.length()+1;i++){
+        str1=string.substring(0,i);
+        String str2="";
+
+        for (int j=string.length()-1;j>=0;j--){
+            str2+=string.substring(j,j+1);
+            if (str1.equals(str2)){
+                mirr=string.substring(0,i);
+
+            }
+        }
+    }
+    return mirr;
+}
+
 
 }
