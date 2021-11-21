@@ -69,7 +69,23 @@ public class String_3 {
 //    sumNumbers("aa11b33") → 44
 //    sumNumbers("7 11") → 18
 
-
+    public int sumNumbers(String str) {
+        String sumCh = "";
+        int sumNum = 0;
+        int sum = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (Character.isDigit(str.charAt(i))) {
+                if (i < str.length() - 1 && Character.isDigit(str.charAt(i + 1))) {
+                    sumCh += str.charAt(i);
+                } else {
+                    sumCh += str.charAt(i);
+                    sumNum += Integer.parseInt(sumCh);
+                    sumCh = "";
+                }
+            }
+        }
+        return sumNum;
+    }
 
 
 //    Given two strings, base and remove, return a version of the base string where all instances of the remove string have been removed (not case sensitive). You may assume that the remove string is length 1 or more. Remove only non-overlapping instances, so with "xxx" removing "xx" leaves "x".
@@ -78,7 +94,26 @@ public class String_3 {
 //    withoutString("Hello there", "e") → "Hllo thr"
 //    withoutString("Hello there", "x") → "Hello there"
 
+    public String withoutString(String base, String remove) {
+        String str1 = "";
+        String base2 = base.toLowerCase();
+        String remove2 = remove.toLowerCase();
+        for (int i = 0; i < base.length(); i++) {
+            if (i <= base.length() - remove.length()) {
 
+                if (!base2.substring(i, i + remove.length()).equals(remove2)) {
+                    str1 += base.substring(i, i + 1);
+
+                }
+                if (base2.substring(i, i + remove.length()).equals(remove2)) {
+                    i += remove.length() - 1;
+                }
+            } else {
+                str1 += base.substring(i, i + 1);
+            }
+        }
+        return str1;
+    }
 
 
 //    We'll say that a "triple" in a string is a char appearing three times in a row. Return the number of triples in the given string. The triples may overlap.
@@ -87,33 +122,40 @@ public class String_3 {
 //    countTriple("xxxabyyyycd") → 3
 //    countTriple("a") → 0
 
+    public int countTriple(String str) {
+        int count3 = 0;
+        for (int i = 0; i < str.length() - 2; i++) {
+            if (str.charAt(i) == str.charAt(i + 1) && str.charAt(i) == str.charAt(i + 2)) {
+                count3++;
+            }
+        }
+        return count3;
+    }
 
 
-
-
-//    Given a string, look for a mirror image (backwards) string at both the beginning and end of the given string. In other words, zero or more characters at the very begining of the given string, and at the very end of the string in reverse order (possibly overlapping). For example, the string "abXYZba" has the mirror end "ab".
+    //    Given a string, look for a mirror image (backwards) string at both the beginning and end of the given string. In other words, zero or more characters at the very begining of the given string, and at the very end of the string in reverse order (possibly overlapping). For example, the string "abXYZba" has the mirror end "ab".
 //
 //    mirrorEnds("abXYZba") → "ab"
 //    mirrorEnds("abca") → "a"
 //    mirrorEnds("aba") → "aba"
-public String mirrorEnds(String string) {
-    String halfstr=string.substring(0,string.length()/2);
-    String mirr="";
-    String str1="";
-    for(int i=0;i<string.length()+1;i++){
-        str1=string.substring(0,i);
-        String str2="";
 
-        for (int j=string.length()-1;j>=0;j--){
-            str2+=string.substring(j,j+1);
-            if (str1.equals(str2)){
-                mirr=string.substring(0,i);
+    public String mirrorEnds(String string) {
+        String mirr = "";
+        String str1 = "";
+        for (int i = 0; i < string.length() + 1; i++) {
+            str1 = string.substring(0, i);
+            String str2 = "";
 
+            for (int j = string.length() - 1; j >= 0; j--) {
+                str2 += string.substring(j, j + 1);
+                if (str1.equals(str2)) {
+                    mirr = string.substring(0, i);
+
+                }
             }
         }
+        return mirr;
     }
-    return mirr;
-}
 
 
 }
