@@ -158,4 +158,61 @@ public class String_3 {
     }
 
 
+//
+//    Given a string, return a string where every appearance of the lowercase word "is" has been replaced with "is not". The word "is" should not be immediately preceeded or followed by a letter -- so for example the "is" in "this" does not count. (Note: Character.isLetter(char) tests if a char is a letter.)
+//
+//    notReplace("is test") → "is not test"
+//    notReplace("is-is") → "is not-is not"
+//    notReplace("This is right") → "This is not right"
+
+
+//    Given a string, return true if the number of appearances of "is" anywhere in the string is equal to the number of appearances of "not" anywhere in the string (case sensitive).
+//
+//    equalIsNot("This is not") → false
+//    equalIsNot("This is notnot") → true
+//    equalIsNot("noisxxnotyynotxisi") → true
+
+    public boolean equalIsNot(String str) {
+        int strIs = 0;
+        int strNot = 0;
+        for (int i = 0; i < str.length() - 1; i++) {
+            if (i < str.length() - 1 && str.substring(i, i + 2).equals("is")) {
+                strIs++;
+            }
+            if (i < str.length() - 2 && str.substring(i, i + 3).equals("not")) {
+                strNot++;
+            }
+        }
+        if (strIs == strNot) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+//    Given a string, return the sum of the digits 0-9 that appear in the string, ignoring all other characters. Return 0 if there are no digits in the string. (Note: Character.isDigit(char) tests if a char is one of the chars '0', '1', .. '9'. Integer.parseInt(string) converts a string to an int.)
+//
+//    sumDigits("aa1bc2d3") → 6
+//    sumDigits("aa11b33") → 8
+//    sumDigits("Chocolate") → 0
+
+    public int sumDigits(String str) {
+        String strSum = "";
+        int sumDigits = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (Character.isDigit(str.charAt(i)) == true) {
+                strSum = str.substring(i, i + 1);
+                sumDigits += Integer.parseInt(strSum);
+            }
+        }
+        return sumDigits;
+    }
+
+
+//    Given a string, return the length of the largest "block" in the string. A block is a run of adjacent chars that are the same.
+//
+//    maxBlock("hoopla") → 2
+//    maxBlock("abbCCCddBBBxx") → 3
+//    maxBlock("") → 0
 }
