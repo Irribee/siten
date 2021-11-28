@@ -215,4 +215,25 @@ public class String_3 {
 //    maxBlock("hoopla") → 2
 //    maxBlock("abbCCCddBBBxx") → 3
 //    maxBlock("") → 0
+
+    public int maxBlock(String str) {
+        int block = 1;
+        int maxBlock = 1;
+        if (str.length() == 0) {
+            maxBlock = 0;
+        }
+        for (int i = 0; i < str.length() - 1; i++) {
+            if (str.substring(i, i + 1).equals(str.substring(i + 1, i + 2))) {
+                block++;
+                if (maxBlock < block) {
+                    maxBlock = block;
+                }
+            } else {
+                block = 1;
+            }
+        }
+        return maxBlock;
+    }
+
+
 }
