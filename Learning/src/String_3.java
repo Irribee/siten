@@ -171,16 +171,17 @@ public class String_3 {
             if (str.length() == 2 && str.substring(i, i + 2).equals("is")) {
                 return str.substring(i, i + 2) + " not";
             }
-            if (i == str.length() - 3 && Character.isLetter(str.charAt(i)) == false && str.substring(i + 1, i + 3).equals("is")) {
-                strNot += str.substring(i, i + 3) + " not";
-                break;
-            }
+
             if (Character.isLetter(str.charAt(i)) == false && str.substring(i - 2, i).equals("is")) {
                 if (i > 2 && Character.isLetter(str.charAt(i - 3)) == false) {
                     strNot += " not";
                 }
                 if (i == 2) {
-                    strNot += " not ";
+                    strNot += " not";
+                }
+                if (i == str.length() - 3 && Character.isLetter(str.charAt(i)) == false && str.substring(i + 1, i + 3).equals("is")) {
+                    strNot += str.substring(i, i + 3) + " not";
+                    break;
                 } else {
                     strNot += str.substring(i, i + 1);
                 }
