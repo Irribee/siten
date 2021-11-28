@@ -171,7 +171,7 @@ public class String_3 {
             if (str.length() == 2 && str.substring(i, i + 2).equals("is")) {
                 return str.substring(i, i + 2) + " not";
             }
-            if (i == str.length() - 3 && str.substring(i, i + 3).equals(" is")) {
+            if (i == str.length() - 3 && Character.isLetter(str.charAt(i)) == false && str.substring(i + 1, i + 3).equals("is")) {
                 strNot += str.substring(i, i + 3) + " not";
                 break;
             }
@@ -190,6 +190,7 @@ public class String_3 {
         }
         return strNot;
     }
+
 
 //    Given a string, return true if the number of appearances of "is" anywhere in the string is equal to the number of appearances of "not" anywhere in the string (case sensitive).
 //
