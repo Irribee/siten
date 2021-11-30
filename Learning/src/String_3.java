@@ -166,31 +166,36 @@ public class String_3 {
 //    notReplace("This is right") → "This is not right"
 
     public String notReplace(String str) {
-        String strNot = "";
-        for (int i = 0; i < str.length(); i++) {
-            if (str.length() == 2 && str.substring(i, i + 2).equals("is")) {
-                return str.substring(i, i + 2) + " not";
-            }
-
-            if (Character.isLetter(str.charAt(i)) == false && str.substring(i - 2, i).equals("is")) {
-                if (i > 2 && Character.isLetter(str.charAt(i - 3)) == false) {
-                    strNot += " not";
+        String strNot="";
+        if (str.length()==2 && str.substring(0,2).equals("is")){
+            return str+" not";
+        }
+        for (int i=0;i<str.length();i++){
+            if (i<str.length()-1 && str.substring(i,i+2).equals("is")){
+                if (i<str.length()-3 && !Character.isLetter(str.charAt(i+2)) && i == 0)  {
+                    strNot=str.substring(i,i+2) + " not";
+                    i++;
                 }
-                if (i == 2) {
-                    strNot += " not";
+                else if (i>0 && i<str.length()-3 && !Character.isLetter(str.charAt(i-1)) && !Character.isLetter(str.charAt(i+2))) {
+                    strNot+=str.substring(i,i+2)+" not";
+                    i++;
                 }
-                if (i == str.length() - 3 && Character.isLetter(str.charAt(i)) == false && str.substring(i + 1, i + 3).equals("is")) {
-                    strNot += str.substring(i, i + 3) + " not";
+                else if (i>0 && !Character.isLetter(str.charAt(i-1)) && i==str.length()-2){
+                    strNot+=str.substring(i,i+2)+" not";
                     break;
-                } else {
-                    strNot += str.substring(i, i + 1);
                 }
-            } else {
-                strNot += str.substring(i, i + 1);
+                else{
+                    strNot+=str.substring(i,i+2);
+                    i++;
+                }
+            }
+            else{
+                strNot+=str.substring(i,i+1);
             }
         }
         return strNot;
     }
+
 
 
 //    Given a string, return true if the number of appearances of "is" anywhere in the string is equal to the number of appearances of "not" anywhere in the string (case sensitive).
