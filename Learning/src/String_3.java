@@ -132,6 +132,23 @@ public class String_3 {
         return count3;
     }
 
+    //  countTriple, но для большого количества вхождений
+    public int countTriple(String str, int count) {
+        int sameNumber=0;
+        int number = 0;
+        for (int i = 0; i < str.length()-1; i++) {
+            if (str.charAt(i) == str.charAt(i + 1)) {
+                number++;
+                if (number==count-1){
+                    sameNumber++;
+                }
+            }
+            else {
+                number = 0;
+            }
+        }
+        return sameNumber;
+    }
 
     //    Given a string, look for a mirror image (backwards) string at both the beginning and end of the given string. In other words, zero or more characters at the very begining of the given string, and at the very end of the string in reverse order (possibly overlapping). For example, the string "abXYZba" has the mirror end "ab".
 //
@@ -157,8 +174,27 @@ public class String_3 {
         return mirr;
     }
 
+    //mirrorEnds-второй способ
 
-//
+    public String mirrorEnds(String string) {
+        String mirr="";
+        String str1="";
+        String str2="";
+        for(int i=1;i<string.length()+1;i++){
+            str1=string.substring(0,i);
+            str2+=string.charAt(string.length()-i);
+            if (str1.equals(str2)){
+                mirr=string.substring(0,i);
+            }
+            else{
+                break;
+            }
+        }
+        return mirr;
+    }
+
+
+
 //    Given a string, return a string where every appearance of the lowercase word "is" has been replaced with "is not". The word "is" should not be immediately preceeded or followed by a letter -- so for example the "is" in "this" does not count. (Note: Character.isLetter(char) tests if a char is a letter.)
 //
 //    notReplace("is test") → "is not test"

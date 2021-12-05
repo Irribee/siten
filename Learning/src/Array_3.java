@@ -160,18 +160,68 @@ public class Array_3 {
 //    maxMirror([1, 2, 1, 4]) → 3
 //    maxMirror([7, 1, 2, 9, 7, 2, 1]) → 2
     public int maxMirror(int[] nums) {
-        int maxMir = 0;
-        for (int i = 0; i < nums.length; i++) {
-            maxMir = 0;
-            for (int j = nums.length - 1; j > i; j--) {
-                if (nums[i + maxMir] == nums[j]) {
+        int maxMir=0;
+        int maxim=0;
+        for(int i=0;i<nums.length;i++){
+            maxMir=0;
+            for (int j=nums.length-1;j>i;j--){
+                if (j>i+maxMir && nums[i+maxMir]==nums[j]){
                     maxMir++;
+                    if (maxim<maxMir){
+                        maxim=maxMir;
+                    }
                 }
-
             }
         }
-        return maxMir;
+        return  maxim;
     }
+
 //не работает, из-за того, что возвращаем maxMir, но он же обновляется перед вложенным циклом, поэтому всегда будет 0, но и ьез обнуления этой переменной ничего не получится.
+
+
+//(This is a slightly harder version of the fix34 problem.) Return an array that contains exactly the same numbers as the given array, but rearranged so that every 4 is immediately followed by a 5. Do not move the 4's, but every other number may move. The array contains the same number of 4's and 5's, and every 4 has a number after it that is not a 4. In this version, 5's may appear anywhere in the original array.
+//
+//    fix45([5, 4, 9, 4, 9, 5]) → [9, 4, 5, 4, 5, 9]
+//    fix45([1, 4, 1, 5]) → [1, 4, 5, 1]
+//    fix45([1, 4, 1, 5, 5, 4, 1]) → [1, 4, 5, 1, 1, 4, 5]
+
+
+
+
+
+
+
+//    Given n>=0, create an array length n*n with the following pattern, shown here for n=3 : {0, 0, 1,    0, 2, 1,    3, 2, 1} (spaces added to show the 3 groups).
+//
+//    squareUp(3) → [0, 0, 1, 0, 2, 1, 3, 2, 1]
+//    squareUp(2) → [0, 1, 2, 1]
+//    squareUp(4) → [0, 0, 0, 1, 0, 0, 2, 1, 0, 3, 2, 1, 4, 3, 2, 1]
+
+
+
+
+//    Say that a "clump" in an array is a series of 2 or more adjacent elements of the same value. Return the number of clumps in the given array.
+//
+//        countClumps([1, 2, 2, 3, 4, 4]) → 2
+//    countClumps([1, 1, 2, 1, 1]) → 2
+//    countClumps([1, 1, 1, 1, 1]) → 1
+
+    public int countClumps(int[] nums) {
+        int  countClumps=0;
+        int number=0;
+
+        for (int i=0;i<nums.length-1;i++){
+            number=nums[i];
+            if(i>0 && number==nums[i+1] && number==nums[i-1]){
+                continue;
+            }
+            if(nums[i]==nums[i+1]){
+                i++;
+                countClumps++;
+            }
+        }
+        return countClumps;
+    }
+
 }
 
