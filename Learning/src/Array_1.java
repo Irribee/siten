@@ -23,14 +23,13 @@ public class Array_1 {
     public int[] make2(int[] arr1, int[] arr2, int len) {
         int[] arr3 = new int[len];
         int index = 0;
-        for (int i = 0, i<arr1.length;
-        i++){
+        for (int i = 0, i<arr1.length; i++){
             if (index <= len && i <= len) {
                 arr3[index] = arr1[i];
             }
             index++;
         }
-        for (int i = 0, i<arr2.length; i++){
+        for (int i = 0, i<arr2.length, i++){
             if (index <= len && i<= len) {
                 arr3[index] = arr2[i];
             }

@@ -14,12 +14,11 @@ public class Array_3 {
             for (int j = nums.length - 1; j > i; j--) {
                 if (nums[i] == nums[j] && span < j - i) {
                     span = j - i + 1;
-                } else if (nums[i] == nums[j] && span > j - i) {
-                    span = span;
+                    break;
                 }
             }
         }
-        if (span == 0 && nums.length != 0) { //спросить у Пашки
+        if (span == 0 && nums.length != 0) {
             return 1;
         }
         return span;
