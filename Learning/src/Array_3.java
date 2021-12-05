@@ -32,7 +32,7 @@ public class Array_3 {
 //    canBalance([2, 1, 1, 2, 1]) → false
 //    canBalance([10, 10]) → true
 
-   //a)
+    //a)
     public boolean canBalance(int[] nums) {
         boolean answer = false;
         int sumLeft = 0;
@@ -52,29 +52,25 @@ public class Array_3 {
 
     //b)
     public boolean canBalance(int[] nums) {
-        int sumLeft=nums[0];
-        int count=1;
-        int sumRight=nums[nums.length-1];
-        for (int i=0;i<nums.length;i++){
-            if (i<=nums.length-count){
-                if (sumRight<sumLeft){
-                    sumRight+=nums[nums.length-1-i];
-                }
-                else{
-                    sumLeft+=nums[count];
+        int sumLeft = nums[0];
+        int count = 1;
+        int sumRight = nums[nums.length - 1];
+        for (int i = 0; i < nums.length; i++) {
+            if (i <= nums.length - count) {
+                if (sumRight < sumLeft) {
+                    sumRight += nums[nums.length - 1 - i];
+                } else {
+                    sumLeft += nums[count];
                     count++;
 
                 }
-                if (sumLeft==sumRight){
+                if (sumLeft == sumRight) {
                     return true;
                 }
             }
         }
         return false;
     }
-
-
-
 
 
 //    Given n>=0, create an array with the pattern {1,    1, 2,    1, 2, 3,   ... 1, 2, 3 .. n} (spaces added to show the grouping). Note that the length of the array will be 1 + 2 + 3 ... + n, which is known to sum to exactly n*(n + 1)/2.
@@ -188,20 +184,20 @@ public class Array_3 {
 //    maxMirror([1, 2, 1, 4]) → 3
 //    maxMirror([7, 1, 2, 9, 7, 2, 1]) → 2
     public int maxMirror(int[] nums) {
-        int maxMir=0;
-        int maxim=0;
-        for(int i=0;i<nums.length;i++){
-            maxMir=0;
-            for (int j=nums.length-1;j>i;j--){
-                if (j>i+maxMir && nums[i+maxMir]==nums[j]){
+        int maxMir = 0;
+        int maxim = 0;
+        for (int i = 0; i < nums.length; i++) {
+            maxMir = 0;
+            for (int j = nums.length - 1; j > i; j--) {
+                if (j > i + maxMir && nums[i + maxMir] == nums[j]) {
                     maxMir++;
-                    if (maxim<maxMir){
-                        maxim=maxMir;
+                    if (maxim < maxMir) {
+                        maxim = maxMir;
                     }
                 }
             }
         }
-        return  maxim;
+        return maxim;
     }
 
 //не работает, из-за того, что возвращаем maxMir, но он же обновляется перед вложенным циклом, поэтому всегда будет 0, но и ьез обнуления этой переменной ничего не получится.
@@ -214,18 +210,11 @@ public class Array_3 {
 //    fix45([1, 4, 1, 5, 5, 4, 1]) → [1, 4, 5, 1, 1, 4, 5]
 
 
-
-
-
-
-
 //    Given n>=0, create an array length n*n with the following pattern, shown here for n=3 : {0, 0, 1,    0, 2, 1,    3, 2, 1} (spaces added to show the 3 groups).
 //
 //    squareUp(3) → [0, 0, 1, 0, 2, 1, 3, 2, 1]
 //    squareUp(2) → [0, 1, 2, 1]
 //    squareUp(4) → [0, 0, 0, 1, 0, 0, 2, 1, 0, 3, 2, 1, 4, 3, 2, 1]
-
-
 
 
 //    Say that a "clump" in an array is a series of 2 or more adjacent elements of the same value. Return the number of clumps in the given array.
@@ -235,15 +224,15 @@ public class Array_3 {
 //    countClumps([1, 1, 1, 1, 1]) → 1
 
     public int countClumps(int[] nums) {
-        int  countClumps=0;
-        int number=0;
+        int countClumps = 0;
+        int number = 0;
 
-        for (int i=0;i<nums.length-1;i++){
-            number=nums[i];
-            if(i>0 && number==nums[i+1] && number==nums[i-1]){
+        for (int i = 0; i < nums.length - 1; i++) {
+            number = nums[i];
+            if (i > 0 && number == nums[i + 1] && number == nums[i - 1]) {
                 continue;
             }
-            if(nums[i]==nums[i+1]){
+            if (nums[i] == nums[i + 1]) {
                 i++;
                 countClumps++;
             }

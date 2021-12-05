@@ -30,9 +30,8 @@ public class Array_1 {
             }
             index++;
         }
-        for (int i = 0, i<arr2.length;
-        i++){
-            if (index <= len && i <= len) {
+        for (int i = 0, i<arr2.length; i++){
+            if (index <= len && i<= len) {
                 arr3[index] = arr2[i];
             }
             index++;

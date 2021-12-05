@@ -134,21 +134,21 @@ public class String_3 {
 
     //  countTriple, но для большого количества вхождений
     public int countTriple(String str, int count) {
-        int sameNumber=0;
+        int sameNumber = 0;
         int number = 0;
-        for (int i = 0; i < str.length()-1; i++) {
+        for (int i = 0; i < str.length() - 1; i++) {
             if (str.charAt(i) == str.charAt(i + 1)) {
                 number++;
-                if (number==count-1){
+                if (number == count - 1) {
                     sameNumber++;
                 }
-            }
-            else {
+            } else {
                 number = 0;
             }
         }
         return sameNumber;
     }
+
 
     //    Given a string, look for a mirror image (backwards) string at both the beginning and end of the given string. In other words, zero or more characters at the very begining of the given string, and at the very end of the string in reverse order (possibly overlapping). For example, the string "abXYZba" has the mirror end "ab".
 //
@@ -177,22 +177,20 @@ public class String_3 {
     //mirrorEnds-второй способ
 
     public String mirrorEnds(String string) {
-        String mirr="";
-        String str1="";
-        String str2="";
-        for(int i=1;i<string.length()+1;i++){
-            str1=string.substring(0,i);
-            str2+=string.charAt(string.length()-i);
-            if (str1.equals(str2)){
-                mirr=string.substring(0,i);
-            }
-            else{
+        String mirr = "";
+        String str1 = "";
+        String str2 = "";
+        for (int i = 1; i < string.length() + 1; i++) {
+            str1 = string.substring(0, i);
+            str2 += string.charAt(string.length() - i);
+            if (str1.equals(str2)) {
+                mirr = string.substring(0, i);
+            } else {
                 break;
             }
         }
         return mirr;
     }
-
 
 
 //    Given a string, return a string where every appearance of the lowercase word "is" has been replaced with "is not". The word "is" should not be immediately preceeded or followed by a letter -- so for example the "is" in "this" does not count. (Note: Character.isLetter(char) tests if a char is a letter.)
@@ -202,36 +200,31 @@ public class String_3 {
 //    notReplace("This is right") → "This is not right"
 
     public String notReplace(String str) {
-        String strNot="";
-        if (str.length()==2 && str.substring(0,2).equals("is")){
-            return str+" not";
+        String strNot = "";
+        if (str.length() == 2 && str.substring(0, 2).equals("is")) {
+            return str + " not";
         }
-        for (int i=0;i<str.length();i++){
-            if (i<str.length()-1 && str.substring(i,i+2).equals("is")){
-                if (i<str.length()-3 && !Character.isLetter(str.charAt(i+2)) && i == 0)  {
-                    strNot=str.substring(i,i+2) + " not";
+        for (int i = 0; i < str.length(); i++) {
+            if (i < str.length() - 1 && str.substring(i, i + 2).equals("is")) {
+                if (i < str.length() - 3 && !Character.isLetter(str.charAt(i + 2)) && i == 0) {
+                    strNot = str.substring(i, i + 2) + " not";
                     i++;
-                }
-                else if (i>0 && i<str.length()-3 && !Character.isLetter(str.charAt(i-1)) && !Character.isLetter(str.charAt(i+2))) {
-                    strNot+=str.substring(i,i+2)+" not";
+                } else if (i > 0 && i < str.length() - 3 && !Character.isLetter(str.charAt(i - 1)) && !Character.isLetter(str.charAt(i + 2))) {
+                    strNot += str.substring(i, i + 2) + " not";
                     i++;
-                }
-                else if (i>0 && !Character.isLetter(str.charAt(i-1)) && i==str.length()-2){
-                    strNot+=str.substring(i,i+2)+" not";
+                } else if (i > 0 && !Character.isLetter(str.charAt(i - 1)) && i == str.length() - 2) {
+                    strNot += str.substring(i, i + 2) + " not";
                     break;
-                }
-                else{
-                    strNot+=str.substring(i,i+2);
+                } else {
+                    strNot += str.substring(i, i + 2);
                     i++;
                 }
-            }
-            else{
-                strNot+=str.substring(i,i+1);
+            } else {
+                strNot += str.substring(i, i + 1);
             }
         }
         return strNot;
     }
-
 
 
 //    Given a string, return true if the number of appearances of "is" anywhere in the string is equal to the number of appearances of "not" anywhere in the string (case sensitive).
