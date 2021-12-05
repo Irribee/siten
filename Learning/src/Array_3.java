@@ -32,6 +32,7 @@ public class Array_3 {
 //    canBalance([2, 1, 1, 2, 1]) → false
 //    canBalance([10, 10]) → true
 
+   //a)
     public boolean canBalance(int[] nums) {
         boolean answer = false;
         int sumLeft = 0;
@@ -47,6 +48,33 @@ public class Array_3 {
         }
         return answer;
     }
+
+
+    //b)
+    public boolean canBalance(int[] nums) {
+        int sumLeft=nums[0];
+        int count=1;
+        int sumRight=nums[nums.length-1];
+        for (int i=0;i<nums.length;i++){
+            if (i<=nums.length-count){
+                if (sumRight<sumLeft){
+                    sumRight+=nums[nums.length-1-i];
+                }
+                else{
+                    sumLeft+=nums[count];
+                    count++;
+
+                }
+                if (sumLeft==sumRight){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+
+
 
 
 //    Given n>=0, create an array with the pattern {1,    1, 2,    1, 2, 3,   ... 1, 2, 3 .. n} (spaces added to show the grouping). Note that the length of the array will be 1 + 2 + 3 ... + n, which is known to sum to exactly n*(n + 1)/2.
