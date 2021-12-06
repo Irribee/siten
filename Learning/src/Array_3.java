@@ -98,54 +98,27 @@ public class Array_3 {
 //    fix34([3, 2, 2, 4]) → [3, 4, 2, 2]
 
     public int[] fix34(int[] nums) {
-        int[] fix34 = new int[nums.length];
-        int indexThree = 0;
-        int indexFour = 0;
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] == 3) {
-                indexThree = i;
-            }
-            if (nums[i] == 4) {
-                indexFour = i;
-                int change = nums[i];
-                nums[i] = nums[indexThree + 1];
-                nums[indexThree + 1] = change;
+        int[] fix34=new int[nums.length];
+        int indexThree=0;
+        int indexFour=0;
+        for (int i=0; i<nums.length;i++){
+            if (i<nums.length-1 && nums[i]==3 && nums[i+1]!=4){
+                indexThree=i;
+                for ( int j=0; j<nums.length;j++){
+                    if (j>0 && nums[j]==4 && nums[j-1]!=3){
+                        indexFour=j;
+                        int change=nums[j];
+                        nums[j]=nums[indexThree+1];
+                        nums[indexThree+1]=change;
 
+                    }
+                }
             }
         }
         return nums;
     }
-// не подходит для тех моментов, как, например 1, 3, 1, 4, 4, 3, 1 (сначала 3, 4 (ок), но потом идет сначала 4, а уже потом 3), пробовала решить эту проблему таким способом, но так тоже не получается:
-//public int[] fix34(int[] nums) {
-//    int[] fix34=new int[nums.length];
-//    int indexThree=0;
-//    int indexFour=0;
-//    for (int i=0; i<nums.length;i++){
-//        if (nums[i]==3 && indexFour==0 ){
-//            indexThree=i;
-//        }
-//        if (nums[i]==3 && indexFour!=0 ){
-//            indexThree=i;
-//            int change2=nums[i+1];
-//            nums[i+1]=nums[indexFour];
-//            nums[indexFour]=change2;
-//            indexThree=0;
-//            indexFour=0;
-//        }
-//        if (nums[i]==4 && indexThree==0){
-//            indexFour=i;
-//        }
-//        if (nums[i]==4 && indexThree!=0){
-//            indexFour=i;
-//            int change=nums[i];
-//            nums[i]=nums[indexThree+1];
-//            nums[indexThree+1]=change;
-//            indexThree=0;
-//            indexFour=0;
-//        }
-//    }
-//    return nums;
-//}
+
+
 
 
 //    Given two arrays of ints sorted in increasing order, outer and inner, return true if all of the numbers in inner appear in outer. The best solution makes only a single "linear" pass of both arrays, taking advantage of the fact that both arrays are already in sorted order.
@@ -183,23 +156,24 @@ public class Array_3 {
 //    maxMirror([1, 2, 1, 4]) → 3
 //    maxMirror([7, 1, 2, 9, 7, 2, 1]) → 2
     public int maxMirror(int[] nums) {
-        int maxMir = 0;
-        int maxim = 0;
-        for (int i = 0; i < nums.length; i++) {
-            maxMir = 0;
-            for (int j = nums.length - 1; j > i; j--) {
-                if (j > i + maxMir && nums[i + maxMir] == nums[j]) {
+        int maxMir=0;
+        int maxim=0;
+        for(int i=0;i<nums.length;i++){
+            maxMir=0;
+            for (int j=nums.length-1;j>=0;j--){
+                if (i+maxMir<nums.length && nums[i+maxMir]==nums[j]){
                     maxMir++;
-                    if (maxim < maxMir) {
-                        maxim = maxMir;
+                    if (maxim<maxMir){
+                        maxim=maxMir;
                     }
+                }
+                else{
+                    maxMir=0;
                 }
             }
         }
-        return maxim;
+        return  maxim;
     }
-
-//не работает, из-за того, что возвращаем maxMir, но он же обновляется перед вложенным циклом, поэтому всегда будет 0, но и ьез обнуления этой переменной ничего не получится.
 
 
 //(This is a slightly harder version of the fix34 problem.) Return an array that contains exactly the same numbers as the given array, but rearranged so that every 4 is immediately followed by a 5. Do not move the 4's, but every other number may move. The array contains the same number of 4's and 5's, and every 4 has a number after it that is not a 4. In this version, 5's may appear anywhere in the original array.
