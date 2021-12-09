@@ -199,6 +199,7 @@ public class String_3 {
 //    notReplace("is-is") → "is not-is not"
 //    notReplace("This is right") → "This is not right"
 
+    //a)
     public String notReplace(String str) {
         String strNot = "";
         if (str.length() == 2 && str.substring(0, 2).equals("is")) {
@@ -216,6 +217,39 @@ public class String_3 {
                     strNot += str.substring(i, i + 2) + " not";
                     break;
                 } else {
+                    strNot += str.substring(i, i + 2);
+                    i++;
+                }
+            } else {
+                strNot += str.substring(i, i + 1);
+            }
+        }
+        return strNot;
+    }
+
+
+    //b)
+    public String notReplace(String str) {
+        String strNot = "";
+        boolean isLetterBefore = false;
+        boolean isLetterAfter = false;
+        if (str.length() == 2 && str.substring(0, 2).equals("is")) {
+            return str + " not";
+        }
+        for (int i = 0; i < str.length(); i++) {
+            if (i < str.length() - 1 && str.substring(i, i + 2).equals("is")) {
+                if (i < str.length() - 3 && Character.isLetter(str.charAt(i + 2))) {
+                    isLetterAfter = true;
+                }
+                if (i > 0 && Character.isLetter(str.charAt(i - 1))) {
+                    isLetterBefore = true;
+                }
+
+                if (!isLetterBefore && !isLetterAfter) {
+                    strNot += str.substring(i, i + 2) + " not";
+                    i++;
+                }
+                if (isLetterBefore || isLetterAfter) {
                     strNot += str.substring(i, i + 2);
                     i++;
                 }

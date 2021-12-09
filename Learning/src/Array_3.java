@@ -98,27 +98,21 @@ public class Array_3 {
 //    fix34([3, 2, 2, 4]) → [3, 4, 2, 2]
 
     public int[] fix34(int[] nums) {
-        int[] fix34=new int[nums.length];
-        int indexThree=0;
-        int indexFour=0;
-        for (int i=0; i<nums.length;i++){
-            if (i<nums.length-1 && nums[i]==3 && nums[i+1]!=4){
-                indexThree=i;
-                for ( int j=0; j<nums.length;j++){
-                    if (j>0 && nums[j]==4 && nums[j-1]!=3){
-                        indexFour=j;
-                        int change=nums[j];
-                        nums[j]=nums[indexThree+1];
-                        nums[indexThree+1]=change;
-
+        int indexFour = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (i < nums.length - 1 && nums[i] == 3 && nums[i + 1] != 4) {
+                for (int j = 0; j < nums.length; j++) {
+                    if (j > 0 && nums[j] == 4 && nums[j - 1] != 3) {
+                        indexFour = j;
+                        int change = nums[j];
+                        nums[j] = nums[i + 1];
+                        nums[i + 1] = change;
                     }
                 }
             }
         }
         return nums;
     }
-
-
 
 
 //    Given two arrays of ints sorted in increasing order, outer and inner, return true if all of the numbers in inner appear in outer. The best solution makes only a single "linear" pass of both arrays, taking advantage of the fact that both arrays are already in sorted order.
@@ -156,23 +150,22 @@ public class Array_3 {
 //    maxMirror([1, 2, 1, 4]) → 3
 //    maxMirror([7, 1, 2, 9, 7, 2, 1]) → 2
     public int maxMirror(int[] nums) {
-        int maxMir=0;
-        int maxim=0;
-        for(int i=0;i<nums.length;i++){
-            maxMir=0;
-            for (int j=nums.length-1;j>=0;j--){
-                if (i+maxMir<nums.length && nums[i+maxMir]==nums[j]){
+        int maxMir = 0;
+        int maxim = 0;
+        for (int i = 0; i < nums.length; i++) {
+            maxMir = 0;
+            for (int j = nums.length - 1; j >= 0; j--) {
+                if (i + maxMir < nums.length && nums[i + maxMir] == nums[j]) {
                     maxMir++;
-                    if (maxim<maxMir){
-                        maxim=maxMir;
+                    if (maxim < maxMir) {
+                        maxim = maxMir;
                     }
-                }
-                else{
-                    maxMir=0;
+                } else {
+                    maxMir = 0;
                 }
             }
         }
-        return  maxim;
+        return maxim;
     }
 
 
@@ -182,6 +175,23 @@ public class Array_3 {
 //    fix45([1, 4, 1, 5]) → [1, 4, 5, 1]
 //    fix45([1, 4, 1, 5, 5, 4, 1]) → [1, 4, 5, 1, 1, 4, 5]
 
+    public int[] fix45(int[] nums) {
+        int indexFive = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (i < nums.length - 1 && nums[i] == 4 && nums[i + 1] != 5) {
+                for (int j = 0; j < nums.length; j++) {
+                    if (nums[j] == 5 && ((j > 0 && nums[j - 1] != 4) || (j == 0))) {
+                        indexFive = j;
+                        int change = nums[j];
+                        nums[j] = nums[i + 1];
+                        nums[i + 1] = change;
+                    }
+                }
+            }
+        }
+        return nums;
+    }
+
 
 //    Given n>=0, create an array length n*n with the following pattern, shown here for n=3 : {0, 0, 1,    0, 2, 1,    3, 2, 1} (spaces added to show the 3 groups).
 //
@@ -189,6 +199,22 @@ public class Array_3 {
 //    squareUp(2) → [0, 1, 2, 1]
 //    squareUp(4) → [0, 0, 0, 1, 0, 0, 2, 1, 0, 3, 2, 1, 4, 3, 2, 1]
 
+    public int[] squareUp(int n) {
+        int[] mas = new int[n * n];
+        int index = n * n - 1;
+        for (int i = n; i > 0; i--) {
+            for (int j = 1; j < n + 1; j++) {
+                if (j > i) {
+                    mas[index] = 0;
+                    index--;
+                } else {
+                    mas[index] = j;
+                    index--;
+                }
+            }
+        }
+        return mas;
+    }
 
 //    Say that a "clump" in an array is a series of 2 or more adjacent elements of the same value. Return the number of clumps in the given array.
 //
