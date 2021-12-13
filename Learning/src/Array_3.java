@@ -150,22 +150,22 @@ public class Array_3 {
 //    maxMirror([1, 2, 1, 4]) → 3
 //    maxMirror([7, 1, 2, 9, 7, 2, 1]) → 2
     public int maxMirror(int[] nums) {
-        int maxMir = 0;
-        int maxim = 0;
+        int currentMirror = 0;
+        int maxMirror = 0;
         for (int i = 0; i < nums.length; i++) {
-            maxMir = 0;
+            currentMirror = 0;
             for (int j = nums.length - 1; j >= 0; j--) {
-                if (i + maxMir < nums.length && nums[i + maxMir] == nums[j]) {
-                    maxMir++;
-                    if (maxim < maxMir) {
-                        maxim = maxMir;
+                if (i + currentMirror < nums.length && nums[i + currentMirror] == nums[j]) {
+                    currentMirror++;
+                    if (maxMirror < currentMirror) {
+                        maxMirror = currentMirror;
                     }
                 } else {
-                    maxMir = 0;
+                    currentMirror = 0;
                 }
             }
         }
-        return maxim;
+        return maxMirror;
     }
 
 

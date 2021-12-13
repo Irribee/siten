@@ -132,21 +132,33 @@ public class String_3 {
         return count3;
     }
 
+
     //  countTriple, но для большого количества вхождений
-    public int countTriple(String str, int count) {
+    public class counntTriple {
+        public static void main(String[] args) {
+            tNumber count = new tNumber();
+            System.out.println(count.countTriple("xxxxxxeeessssaaaa", 4));
+        }
+    }
+
+    class tNumber {
         int sameNumber = 0;
         int number = 0;
-        for (int i = 0; i < str.length() - 1; i++) {
-            if (str.charAt(i) == str.charAt(i + 1)) {
-                number++;
-                if (number == count - 1) {
-                    sameNumber++;
+
+        int countTriple(String str, int count) {
+            for (int i = 0; i < str.length() - 1; i++) {
+                if (str.charAt(i) == str.charAt(i + 1)) {
+                    number++;
+                } else {
+                    if (number >= count - 1) {
+                        sameNumber++;
+                    } else {
+                        number = 0;
+                    }
                 }
-            } else {
-                number = 0;
             }
+            return sameNumber;
         }
-        return sameNumber;
     }
 
 
@@ -237,6 +249,8 @@ public class String_3 {
             return str + " not";
         }
         for (int i = 0; i < str.length(); i++) {
+            isLetterBefore = false;
+            isLetterAfter = false;
             if (i < str.length() - 1 && str.substring(i, i + 2).equals("is")) {
                 if (i < str.length() - 3 && Character.isLetter(str.charAt(i + 2))) {
                     isLetterAfter = true;
@@ -244,15 +258,12 @@ public class String_3 {
                 if (i > 0 && Character.isLetter(str.charAt(i - 1))) {
                     isLetterBefore = true;
                 }
-
                 if (!isLetterBefore && !isLetterAfter) {
                     strNot += str.substring(i, i + 2) + " not";
-                    i++;
-                }
-                if (isLetterBefore || isLetterAfter) {
+                } else {
                     strNot += str.substring(i, i + 2);
-                    i++;
                 }
+                i++;
             } else {
                 strNot += str.substring(i, i + 1);
             }
