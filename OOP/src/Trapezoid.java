@@ -1,19 +1,29 @@
-public class Trapezoid implements SquareAndPerimetr {
-    int a = 7;
-    int b = 19;
-    int c = 6;
-    int d = 3;
-    int h = 5;
-    int s;
-    int p;
+public class Trapezoid implements SquareAndPerimeter {
+    int base1;
+    int base2;
+    int side1;
+    int side2;
+    int height;
+    double p;
+    double s;
 
-    public void Square() {
-        s = (a + b) / 2 * h;
-        System.out.println("The square of the Trapezoid= " + s);
+    public Trapezoid(int base1, int base2, int side1, int side2, int height) {
+        this.base1 = base1;
+        this.base2 = base2;
+        this.side1 = side1;
+        this.side2 = side2;
+        this.height = height;
     }
 
-    public void Perimetr() {
-        p = a + b + c + d;
-        System.out.println("The perimetr of the Trapezoid= " + p);
+    public double square() {
+        s = (base1 + base2) / 2 * height;
+        System.out.println("The square of the Trapezoid= " + s);
+        return s;
+    }
+
+    public double perimeter() {
+        p = base1 + base2 + side1 + side2;
+        System.out.println("The perimeter of the Trapezoid= " + p);
+        return p;
     }
 }

@@ -1,15 +1,21 @@
-public class Circle implements SquareAndPerimetr {
-    int r = 19;
+public class Circle implements SquareAndPerimeter {
+    int radius;
     double s;
     double p;
 
-    public void Square() {
-        s = 3.14 * r * r;
-        System.out.println("The square of the Circle= " + s);
+    public Circle(int radius) {
+        this.radius = radius;
     }
 
-    public void Perimetr() {
-        p = 2 * 3.14 * r;
-        System.out.println("The perimetr of the Circle= " + p);
+    public double square() {
+        s = 3.14 * radius * radius;
+        System.out.println("The square of the Circle= " + s);
+        return s;
+    }
+
+    public double perimeter() {
+        p = 2 * 3.14 * radius;
+        System.out.println("The perimeter of the Circle= " + p);
+        return p;
     }
 }

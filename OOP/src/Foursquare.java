@@ -1,15 +1,21 @@
-public class Foursquare implements SquareAndPerimetr {
-    int a = 7;
-    int s;
-    int p;
+public class Foursquare implements SquareAndPerimeter {
+    int side;
+    double s;
+    double p;
 
-    public void Square() {
-        s = a ^ 2;
-        System.out.println("The square of the Foursquare= " + s);
+    public Foursquare(int side) {
+        this.side = side;
     }
 
-    public void Perimetr() {
-        p = 4 * a;
-        System.out.println("The perimetr of the Foursquare= " + p);
+    public double square() {
+        s = side ^ 2;
+        System.out.println("The square of the Foursquare= " + s);
+        return s;
+    }
+
+    public double perimeter() {
+        p = 4 * side;
+        System.out.println("The perimeter of the Foursquare= " + p);
+        return p;
     }
 }

@@ -1,18 +1,27 @@
-public class Triangle implements SquareAndPerimetr {
-    int a = 10;
-    int b = 9;
-    int c = 5;
-    int h = 18;
-    int p;
+public class Triangle implements SquareAndPerimeter {
+    int side1;
+    int side2;
+    int base;
+    int height;
+    double p;
     double s;
 
-    public void Square() {
-        s = (a * h) / 2;
-        System.out.println("The square of the triangle= " + s);
+    public Triangle(int side1, int side2, int base, int height) {
+        this.side1 = side1;
+        this.side2 = side2;
+        this.base = base;
+        this.height = height;
     }
 
-    public void Perimetr() {
-        p = a + b + c;
-        System.out.println("The perimetr of the triangle= " + p);
+    public double square() {
+        s = (base * height) / 2;
+        System.out.println("The square of the triangle= " + s);
+        return s;
+    }
+
+    public double perimeter() {
+        p = side1 + side2 + base;
+        System.out.println("The perimeter of the triangle= " + p);
+        return p;
     }
 }
