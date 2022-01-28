@@ -9,13 +9,13 @@ public class Circle implements SquareAndPerimeter {
 
     public double square() {
         s = 3.14 * radius * radius;
-        System.out.println("The square of the Circle= " + s);
+        // System.out.println("The square of the Circle= " + s);
         return s;
     }
 
     public double perimeter() {
         p = 2 * 3.14 * radius;
-        System.out.println("The perimeter of the Circle= " + p);
+        // System.out.println("The perimeter of the Circle= " + p);
         return p;
     }
 }

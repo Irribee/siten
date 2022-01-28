@@ -9,13 +9,13 @@ public class Foursquare implements SquareAndPerimeter {
 
     public double square() {
         s = side ^ 2;
-        System.out.println("The square of the Foursquare= " + s);
+        // System.out.println("The square of the Foursquare= " + s);
         return s;
     }
 
     public double perimeter() {
         p = 4 * side;
-        System.out.println("The perimeter of the Foursquare= " + p);
+        // System.out.println("The perimeter of the Foursquare= " + p);
         return p;
     }
 }

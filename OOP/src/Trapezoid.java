@@ -17,13 +17,13 @@ public class Trapezoid implements SquareAndPerimeter {
 
     public double square() {
         s = (base1 + base2) / 2 * height;
-        System.out.println("The square of the Trapezoid= " + s);
+        // System.out.println("The square of the Trapezoid= " + s);
         return s;
     }
 
     public double perimeter() {
         p = base1 + base2 + side1 + side2;
-        System.out.println("The perimeter of the Trapezoid= " + p);
+        //System.out.println("The perimeter of the Trapezoid= " + p);
         return p;
     }
 }

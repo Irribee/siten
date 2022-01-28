@@ -15,13 +15,13 @@ public class Triangle implements SquareAndPerimeter {
 
     public double square() {
         s = (base * height) / 2;
-        System.out.println("The square of the triangle= " + s);
+        // System.out.println("The square of the triangle= " + s); спросить у Пашки, почему удаляем
         return s;
     }
 
     public double perimeter() {
         p = side1 + side2 + base;
-        System.out.println("The perimeter of the triangle= " + p);
+        // System.out.println("The perimeter of the triangle= " + p);
         return p;
     }
 }
