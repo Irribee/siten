@@ -10,30 +10,30 @@
 public class BinaryGap {
     public int solution(int N) {
         // write your code in Java SE 8
-        String binN=Integer.toBinaryString(N);
-        boolean isStart1=false;
-        boolean isFinish1=false;
-        int start1=0;
-        int finish1=0;
-        int countZero=0;
-        int maxZero=0;
-        for(int i=0;i<binN.length()-1;i++){
-            if(binN.charAt(i)=='1' && binN.charAt(i+1)=='0'){
-                isStart1=true;
-                start1=i;
+        String binN = Integer.toBinaryString(N);
+        boolean isStart1 = false;
+        boolean isFinish1 = false;
+        int start1 = 0;
+        int finish1 = 0;
+        int countZero = 0;
+        int maxZero = 0;
+        for (int i = 0; i < binN.length() - 1; i++) {
+            if (binN.charAt(i) == '1' && binN.charAt(i + 1) == '0') {
+                isStart1 = true;
+                start1 = i;
             }
-            if(binN.charAt(i)=='0' && binN.charAt(i+1)=='1'){
-                isFinish1=true;
-                finish1=i+1;
+            if (binN.charAt(i) == '0' && binN.charAt(i + 1) == '1') {
+                isFinish1 = true;
+                finish1 = i + 1;
             }
-            if(isFinish1==true && isStart1==true){
-                countZero=finish1-start1-1;
-                if(countZero>maxZero){
-                    maxZero=countZero;
+            if (isFinish1 == true && isStart1 == true) {
+                countZero = finish1 - start1 - 1;
+                if (countZero > maxZero) {
+                    maxZero = countZero;
                 }
-                countZero=0;
-                isFinish1=false;
-                isStart1=false;
+                countZero = 0;
+                isFinish1 = false;
+                isStart1 = false;
             }
         }
         return maxZero;
