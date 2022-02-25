@@ -22,19 +22,13 @@
 //        N and K are integers within the range [0..100];
 //        each element of array A is an integer within the range [−1,000..1,000].
 
-public class CyclicRotation {
+class Solution {
     public int[] solution(int[] A, int K) {
+        int lengthA=A.length;
         // write your code in Java SE 8
-        int[] arr = new int[A.length];
-        arr[0] = A[arr.length - 1];
-        for (int j = 0; j < K; j++) {
-            for (int i = 1; i < arr.length; i++) {
-                arr[i] = A[j - 1];
-                // в этом цикле у меня постоянно будет одинаковый результат, т.к. используем цикл А, а нужно в этом моменте (A[j - 1]) как-то
-                //использовать уже полученный массив arr, чтоб именно относительно него происходили дальнейшие изменения. Я же не могу после этого цикла сделать так, чтобы массив А принял все значения массива arr...
-                //Либо вообще я тут неправильно мыслю и нужно как-то с индексами работать
-            }
-            arr[0] = arr[arr.length - 1];
+        int[] arr = new int[lengthA];
+        for (int i = 0; i < lengthA; i++) {
+            arr[i] = A[(i+lengthA-K)%lengthA];
         }
         return arr;
     }
