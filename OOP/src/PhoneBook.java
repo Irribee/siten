@@ -1,3 +1,7 @@
+//Код телефонной книги. Если пользователь вводит имя абонента, и он найден, то выводит номер контакта.
+//Если не найден, то просит ввести номер его телефона и запоминает в Map.
+//И выводит полный список абонентов в алфавитном порядке
+
 import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
@@ -18,12 +22,10 @@ public class PhoneBook {
             if (phoneBook.containsKey(name)) {
                 phoneNumber = phoneBook.get(name);
                 System.out.println(name + " : " + phoneNumber);
-            }
-            else if (name.equals("End")) {
+            } else if (name.equals("End")) {
                 printMap(phoneBook);
                 continue;
-            }
-            else if (!phoneBook.containsKey(name)) {//где то в этом условии ошибка
+            } else if (!phoneBook.containsKey(name)) {//где то cэтим оператором ошибка
                 System.out.println("Input the phone number: ");
                 phoneNumber = scanner.nextLong();
                 System.out.println(name + " : " + phoneNumber);
@@ -31,6 +33,7 @@ public class PhoneBook {
             }
         }
     }
+
     public static void printMap(Map<String, Long> map) {
         for (String key : map.keySet()) {
             System.out.println(key + " - " + map.get(key));
