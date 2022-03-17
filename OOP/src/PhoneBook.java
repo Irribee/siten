@@ -7,48 +7,22 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
 
-public class PhoneBook {
-   // Scanner scanner = new Scanner(System.in);
-    public static HashMap<String, String> phoneBook = new HashMap<>();
+public class PhoneBook implements PhoneBookInterface {//подчеркнуто красным, типа нужно объявить класс абстрактным, поччему??
+    TreeMap<String, String> book = new TreeMap<>();
 
-    public static void getBasicContacts() {
-        phoneBook.put("Rodion", "89536975212");
-        phoneBook.put("Anton", "89680369941");
-        phoneBook.put("Katya", "89543695665");
-        phoneBook.put("Borya", "84563697741");
-        phoneBook.put("Nina", "89776589631");
+    public String findNumberOfContact(String name) {
+        String phoneNumber = book.get(name);
+        return phoneNumber;
     }
 
-    public static void findNumberOfContact(String name) {
-        String phoneNumber = phoneBook.get(name);
-        System.out.println(name + " : " + phoneNumber);
-    }
-
-    public static void PrintAllNumbers() {
-        for (Map.Entry<String, String> k : phoneBook.entrySet()) {
+    public void PrintAllNumbers() {
+        for (Map.Entry<String, String> k : book.entrySet()) {
             System.out.println("Контакты: " + k.getValue() + ": " + k.getKey());
         }
     }
 
-    public static void addNumber(String name, String number) {
-        phoneBook.put(name, number);
-    }
-
-    public static void main(String[] args) {
-        getBasicContacts(); //получаем исх. список контактов
-        Scanner scanner = new Scanner(System.in);
-        for (; ; ) {
-            System.out.println("Input the name: ");
-            String name = scanner.nextLine();
-            String phoneNumber = "";
-            if (phoneBook.containsKey(name)) {
-                findNumberOfContact("Nina");
-            } else if (name.equals("End")) {
-                PrintAllNumbers();
-            } else if (!phoneBook.containsKey(name)) {
-                addNumber("Mary", "889563649981");
-            }
-        }
+    public void addNumber(String name, String number) {
+        book.put(name, number);
     }
 }
 
