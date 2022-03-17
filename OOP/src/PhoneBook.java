@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
 
-public class PhoneBook implements PhoneBookInterface {//подчеркнуто красным, типа нужно объявить класс абстрактным, поччему??
+public class PhoneBook implements PhoneBookInterface {//подчеркнуто красным, типа нужно объявить класс абстрактным, почему??
     TreeMap<String, String> book = new TreeMap<>();
 
     public String findNumberOfContact(String name) {

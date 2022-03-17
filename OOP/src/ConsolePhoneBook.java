@@ -7,7 +7,7 @@ public class ConsolePhoneBook {
         Scanner scanner = new Scanner(System.in);
         PhoneBook book = new PhoneBook();
         TreeMap<String, String> phoneBook = new TreeMap<>();
-        void getBasicContacts () {//какой параметр здесь вставить?
+        void getBasicContacts () {//какой параметр здесь вставить? что-то типа PhoneBook
             phoneBook.put("Rodion", "89536975212");
             phoneBook.put("Anton", "89680369941");
             phoneBook.put("Katya", "89543695665");
