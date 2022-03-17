@@ -5,9 +5,9 @@ import java.util.TreeMap;
 public class ConsolePhoneBook {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        PhoneBook book = new PhoneBook();
+        PhoneBook phone = new PhoneBook();
         TreeMap<String, String> phoneBook = new TreeMap<>();
-        void getBasicContacts () {//какой параметр здесь вставить? что-то типа PhoneBook
+        void addBasicContacts () {//какой параметр здесь вставить? что-то типа PhoneBook
             phoneBook.put("Rodion", "89536975212");
             phoneBook.put("Anton", "89680369941");
             phoneBook.put("Katya", "89543695665");
@@ -19,11 +19,13 @@ public class ConsolePhoneBook {
             String name = scanner.nextLine();
             String phoneNumber = "";
             if (phoneBook.containsKey(name)) {
-                book.findNumberOfContact("Petr");
+                phone.findNumberOfContact(name);
             } else if (name.equals("End")) {
-                book.PrintAllNumbers();
+                phone.PrintAllNumbers();
             } else if (!phoneBook.containsKey(name)) {
-                book.addNumber("Petr","8968225698");
+                System.out.println("Input the number of phone: ");
+                phoneNumber = scanner.nextLine();
+                phone.addNumber(name, phoneNumber);
             }
         }
     }
