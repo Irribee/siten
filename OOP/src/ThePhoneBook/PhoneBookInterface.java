@@ -1,3 +1,5 @@
+package ThePhoneBook;
+
 public interface PhoneBookInterface {
     public String findNumberOfContact(String name);
 

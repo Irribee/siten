@@ -1,13 +1,11 @@
-//Код телефонной книги. Если пользователь вводит имя абонента, и он найден, то выводит номер контакта.
+package ThePhoneBook;//Код телефонной книги. Если пользователь вводит имя абонента, и он найден, то выводит номер контакта.
 //Если не найден, то просит ввести номер его телефона и запоминает в Map.
 //И выводит полный список абонентов в алфавитном порядке
 
-import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
 import java.util.TreeMap;
 
-public class PhoneBook implements PhoneBookInterface {//подчеркнуто красным, типа нужно объявить класс абстрактным, почему??
+public class PhoneBook implements PhoneBookInterface {
     TreeMap<String, String> book = new TreeMap<>();
 
     public String findNumberOfContact(String name) {
@@ -31,7 +29,7 @@ public class PhoneBook implements PhoneBookInterface {//подчеркнуто �
 //import java.util.Scanner;
 //import java.util.TreeMap;
 //
-//public class PhoneBook {
+//public class ThePhoneBook.PhoneBook {
 //    public static void main(String[] args) {
 //        TreeMap<String, String> phoneBook = new TreeMap<>();
 //        phoneBook.put("Rodion", "89536975212");
