@@ -27,26 +27,22 @@
 //N is an odd integer within the range [1..1,000,000];
 //each element of array A is an integer within the range [1..1,000,000,000];
 //all but one of the values in A occur an even number of times.
+import java.util.Arrays;
+
 public class OddOccurrencesInArray {
     public int solution(int[] A) {
-        int unpairedElement = 0;
-        for (int i = 0; i < A.length - 1; i++) {
-            for (int j = i + 1; j < A.length; j++) {
-                if (A[i] == A[j]) {
-                    A[i] = 0;
-                    A[j] = 0;
-                    break;
-                }
+        int unpairedNumber = 0;
+        Arrays.sort(A);
+        for (int i = 0; i < A.length; i++) {
+            if (i < A.length - 1 && A[i] == A[i + 1]) {
+                i++;
+                continue;
+            } else {
+                unpairedNumber = A[i];
             }
         }
-        for (int n = 0; n < A.length; n++) {
-            if (A[n] != 0) {
-                unpairedElement = A[n];
-            }
-        }
-        return unpairedElement;
+        return unpairedNumber;
     }
 }
-
 
 
