@@ -1,3 +1,5 @@
+package Figure;
+
 public interface SquareAndPerimeter {
     public double square();
 

@@ -1,3 +1,5 @@
+package Figure;
+
 public class Triangle implements SquareAndPerimeter {
     int side1;
     int side2;

@@ -1,8 +1,15 @@
+package Figure;
+
+import Figure.Circle;
+import Figure.Foursquare;
+import Figure.Trapezoid;
+import Figure.Triangle;
+
 public class TestFigures {
     int sumSquare = 0;
     int sumPerimeter = 0;
 
-//    public int sumFigures(SquareAndPerimeter figur) {
+//    public int sumFigures(Figure.SquareAndPerimeter figur) {
 //
 //        for (int i = 0; i < 4; i++) {
 //            sumSquare += figur.square();
@@ -26,12 +33,12 @@ public class TestFigures {
         }
     }
 
-//public class TestFigures {
+//public class Figure.TestFigures {
 //    public static void main(String[] args) {
-//        Triangle triangle1 = new Triangle(4, 10, 7, 15);
-//        Circle circle1 = new Circle(19);
-//        Foursquare foursquare1 = new Foursquare(47);
-//        Trapezoid trapezoid1 = new Trapezoid(4, 6, 8, 23, 11);
+//        Figure.Triangle triangle1 = new Figure.Triangle(4, 10, 7, 15);
+//        Figure.Circle circle1 = new Figure.Circle(19);
+//        Figure.Foursquare foursquare1 = new Figure.Foursquare(47);
+//        Figure.Trapezoid trapezoid1 = new Figure.Trapezoid(4, 6, 8, 23, 11);
 //        public int[] figures= new int[]{triangle1, circle1, foursquare1, trapezoid1};
 //        triangle1.perimeter();
 //        triangle1.square();

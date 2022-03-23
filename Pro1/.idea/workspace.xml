@@ -20,13 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bcf858b2-52cc-44e6-b3ed-1b68ba77b80c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../OOP/OOP.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pro2/pro2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pro2/src/Dog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pro2/src/TestAnimal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/src/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/src/Figure/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/src/Foursquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/src/Figure/Foursquare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/src/SquareAndPerimeter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/src/Figure/SquareAndPerimeter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/src/TestFigures.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/src/Figure/TestFigures.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/src/Trapezoid.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/src/Figure/Trapezoid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/src/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/src/Figure/Triangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_1/out/production/Project_1/popitka3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_1/src/popitka3.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +53,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../OOP" />
   </component>
   <component name="RunManager">
     <configuration name="counntTriple" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -94,6 +95,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1647934314474">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1647934314474" />
     <state width="1322" height="174" key="GridCell.Tab.0.bottom" timestamp="1645736675353">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
