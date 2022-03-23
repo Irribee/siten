@@ -15,11 +15,12 @@ public class PhoneBook implements PhoneBookInterface {
 
     public void PrintAllNumbers() {
         for (Map.Entry<String, String> k : book.entrySet()) {
-            System.out.println("Контакты: " + k.getValue() + ": " + k.getKey());
+            System.out.println("Contacts: " + k.getKey() + " - " + k.getValue());
         }
     }
 
     public void addNumber(String name, String number) {
+
         book.put(name, number);
     }
 }

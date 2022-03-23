@@ -17,6 +17,7 @@ public class ConsolePhoneBook {
                 phoneDirectory.findNumberOfContact(name);
             } else if (name.equals("End")) {
                 phoneDirectory.PrintAllNumbers();
+                break;
             } else if (!phoneBook.containsKey(name)) {
                 System.out.println("Input the number of phone: ");
                 number = scanner.nextLine();
