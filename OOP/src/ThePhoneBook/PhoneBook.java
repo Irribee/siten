@@ -10,6 +10,9 @@ public class PhoneBook implements PhoneBookInterface {
 
     public String findNumberOfContact(String name) {
         String phoneNumber = book.get(name);
+        if (phoneNumber != null) { //т.к. если имя в телефонном справочнике найдено, то нужно вывести его номер, а не просто вернуть.Но в таком случае имя и номер будут выведены 2 раза, а без SOUT не будет выведено на экран ничего
+            System.out.println(name + " : " + phoneNumber);
+        }
         return phoneNumber;
     }
 

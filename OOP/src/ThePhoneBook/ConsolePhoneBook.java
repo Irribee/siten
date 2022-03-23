@@ -7,21 +7,20 @@ public class ConsolePhoneBook {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         PhoneBook phoneDirectory = new PhoneBook();
-        TreeMap<String, String> phoneBook = new TreeMap<>();
         addBasicContacts(phoneDirectory);
         for (; ; ) {
             System.out.println("Input the name: ");
             String name = scanner.nextLine();
             String number = "";
-            if (phoneBook.containsKey(name)) {
-                phoneDirectory.findNumberOfContact(name);
-            } else if (name.equals("End")) {
+            if (name.equals("End")) {
                 phoneDirectory.PrintAllNumbers();
                 break;
-            } else if (!phoneBook.containsKey(name)) {
+            } else if (phoneDirectory.findNumberOfContact(name) == null) {
                 System.out.println("Input the number of phone: ");
                 number = scanner.nextLine();
                 phoneDirectory.addNumber(name, number);
+            } else {
+                phoneDirectory.findNumberOfContact(name);
             }
         }
     }
