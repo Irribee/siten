@@ -19,13 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcf858b2-52cc-44e6-b3ed-1b68ba77b80c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../OOP/src/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/src/Figure/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OOP/src/Foursquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/src/Figure/Foursquare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OOP/src/SquareAndPerimeter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/src/Figure/SquareAndPerimeter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OOP/src/TestFigures.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/src/Figure/TestFigures.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OOP/src/Trapezoid.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/src/Figure/Trapezoid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OOP/src/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/src/Figure/Triangle.java" afterDir="false" />
+    <list default="true" id="bcf858b2-52cc-44e6-b3ed-1b68ba77b80c" name="Default Changelist" comment="кодилити">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,6 +74,14 @@
       <option name="presentableId" value="Default" />
       <updated>1595538425623</updated>
     </task>
+    <task id="LOCAL-00001" summary="кодилити">
+      <created>1648064286666</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1648064286666</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -93,6 +95,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="кодилити" />
+    <option name="LAST_COMMIT_MESSAGE" value="кодилити" />
   </component>
   <component name="WindowStateProjectService">
     <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1647934314474">
