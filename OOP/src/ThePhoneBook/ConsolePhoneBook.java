@@ -1,7 +1,6 @@
 package ThePhoneBook;
 
 import java.util.Scanner;
-import java.util.TreeMap;
 
 public class ConsolePhoneBook {
     public static void main(String[] args) {
@@ -20,7 +19,8 @@ public class ConsolePhoneBook {
                 number = scanner.nextLine();
                 phoneDirectory.addNumber(name, number);
             } else {
-                phoneDirectory.findNumberOfContact(name);
+                number = phoneDirectory.findNumberOfContact(name);
+                System.out.println(name + " : " + number);
             }
         }
     }
