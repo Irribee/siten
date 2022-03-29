@@ -32,6 +32,45 @@ public class AutoNumber {
             }
         }
     }
+
+    public boolean enumeration(String eliteNumber) {
+        long start = System.currentTimeMillis();
+        autoNumber.contains(eliteNumber);
+        long duration = System.currentTimeMillis() - start;
+        System.out.println(duration);
+        return true;
+    }
+
+    public boolean binarySearch(String eliteNumber) {
+        Collections.sort(autoNumber);
+        long start = System.currentTimeMillis();
+        Collections.binarySearch(autoNumber, eliteNumber);
+        long duration = System.currentTimeMillis() - start;
+        System.out.println(duration);
+        return true;
+    }
+
+    public boolean treeSearch(String eliteNumber) {
+        TreeSet<String> trSet = new TreeSet<>();
+        trSet.addAll(autoNumber);
+        long start = System.currentTimeMillis();
+        trSet.contains(eliteNumber);
+        long duration = System.currentTimeMillis() - start;
+        System.out.println(duration);
+        return true;
+    }
+
+    public boolean hashSearch(String eliteNumber) {
+        HashSet<String> hSet = new HashSet<>();
+        hSet.addAll(autoNumber);
+        long start = System.currentTimeMillis();
+        hSet.contains(eliteNumber);
+        long duration = System.currentTimeMillis() - start;
+        System.out.println(System.currentTimeMillis() - start);
+        return true;
+    }
+}
+
 //        for (int i = 0; i < 2_00; i++) {
 //            String[] number = {"111", "222", "333", "444", "555", "666", "777", "888", "999"};
 //            String[] letter = {"А", "В", "Е", "К", "М", "Н", "О", "Р", "С", "Т", "У", "Х"};
@@ -51,32 +90,5 @@ public class AutoNumber {
 //            autoNumber.add(randRegion);
 //            System.out.println(autoNumber);
 //        }
-
-    public boolean enumeration(String eliteNumber) {
-        autoNumber.contains(eliteNumber);
-        return true;
-    }
-
-    public boolean binarySearch(String eliteNumber) {
-        Collections.sort(autoNumber);
-        Collections.binarySearch(autoNumber, eliteNumber);
-        return true;
-    }
-
-    public boolean treeSearch(String eliteNumber) {
-        TreeSet<String> trSet = new TreeSet<>();
-        trSet.addAll(autoNumber);
-        trSet.contains(eliteNumber);
-        return true;
-    }
-
-    public boolean hashSearch(String eliteNumber) {
-        HashSet<String> hSet = new HashSet<>();
-        hSet.addAll(autoNumber);
-        hSet.contains(eliteNumber);
-        return true;
-    }
-}
-
 
 
