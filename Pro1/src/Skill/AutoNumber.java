@@ -66,7 +66,7 @@ public class AutoNumber {
         long start = System.currentTimeMillis();
         hSet.contains(eliteNumber);
         long duration = System.currentTimeMillis() - start;
-        System.out.println(System.currentTimeMillis() - start);
+        System.out.println(duration);
         return true;
     }
 }
