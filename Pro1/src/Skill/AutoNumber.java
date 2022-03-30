@@ -15,6 +15,8 @@ import java.util.*;
 public class AutoNumber {
     ArrayList<String> autoNumber = new ArrayList<>();
     String number = "";
+    TreeSet<String> trSet = new TreeSet<>();
+    HashSet<String> hSet = new HashSet<>();
 
     public void madeBasic() {
         String[] figure = {"111", "222", "333", "444", "555", "666", "777", "888", "999"};
@@ -34,40 +36,74 @@ public class AutoNumber {
     }
 
     public boolean enumeration(String eliteNumber) {
+        boolean answer;
+        long duration = 0;
         long start = System.currentTimeMillis();
-        autoNumber.contains(eliteNumber);
-        long duration = System.currentTimeMillis() - start;
-        System.out.println(duration);
-        return true;
+        if (autoNumber.contains(eliteNumber)) {
+            duration = System.currentTimeMillis() - start;
+            answer = true;
+        } else {
+            answer = false;
+        }
+        System.out.println(answer + " " + duration);
+        return answer;
     }
 
+
     public boolean binarySearch(String eliteNumber) {
+        boolean answer;
+        long duration = 0;
         Collections.sort(autoNumber);
         long start = System.currentTimeMillis();
-        Collections.binarySearch(autoNumber, eliteNumber);
-        long duration = System.currentTimeMillis() - start;
-        System.out.println(duration);
-        return true;
+        int ind = Collections.binarySearch(autoNumber, eliteNumber);
+        if (ind > 0) {
+            duration = System.currentTimeMillis() - start;
+            answer = true;
+        } else {
+            answer = false;
+        }
+        System.out.println(answer + " " + duration);
+        return answer;
+    }
+
+
+    public void makeTree() {
+        trSet.addAll(autoNumber);
     }
 
     public boolean treeSearch(String eliteNumber) {
-        TreeSet<String> trSet = new TreeSet<>();
-        trSet.addAll(autoNumber);
+        makeTree();
+        boolean answer;
+        long duration = 0;
         long start = System.currentTimeMillis();
-        trSet.contains(eliteNumber);
-        long duration = System.currentTimeMillis() - start;
-        System.out.println(duration);
-        return true;
+        if (trSet.contains(eliteNumber)) {
+            duration = System.currentTimeMillis() - start;
+            answer = true;
+        } else {
+            answer = false;
+        }
+        System.out.println(answer + " " + duration);
+        return answer;
+    }
+
+
+    public void makeHash() {
+        hSet.addAll(autoNumber);
     }
 
     public boolean hashSearch(String eliteNumber) {
-        HashSet<String> hSet = new HashSet<>();
-        hSet.addAll(autoNumber);
+        makeHash();
+        boolean answer;
+        long duration = 0;
         long start = System.currentTimeMillis();
-        hSet.contains(eliteNumber);
-        long duration = System.currentTimeMillis() - start;
-        System.out.println(duration);
-        return true;
+        if (hSet.contains(eliteNumber)) {
+            duration = System.currentTimeMillis() - start;
+            answer = true;
+        } else {
+            answer = false;
+        }
+        System.out.println(answer + " " + duration);
+        return answer;
     }
 }
 

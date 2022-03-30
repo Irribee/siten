@@ -1,6 +1,7 @@
 package Skill;
 
 import java.util.Scanner;
+import java.util.TreeSet;
 
 public class AutoNumberConsole {
     public static void main(String[] args) {

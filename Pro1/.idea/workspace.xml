@@ -19,8 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcf858b2-52cc-44e6-b3ed-1b68ba77b80c" name="Default Changelist" comment="кодилити">
+    <list default="true" id="bcf858b2-52cc-44e6-b3ed-1b68ba77b80c" name="Default Changelist" comment="буду дальше думать, у 3-х последних методов 0 выводит. и sout должен быть в AutoNumberConsole">
+      <change beforePath="$PROJECT_DIR$/../OOP/src/SimpleAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/src/SimpleAnimation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Codility/PermMissingElem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codility/PermMissingElem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Skill/AutoNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Skill/AutoNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Skill/AutoNumberConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Skill/AutoNumberConsole.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +53,33 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../OOP" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.AutoNumberConsole">
+    <configuration name="AutoNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Skill.AutoNumber" />
+      <module name="Pro1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Skill.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AutoNumberConsole" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Skill.AutoNumberConsole" />
+      <module name="Pro1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Skill.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="counntTriple" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="counntTriple" />
       <module name="Pro1" />
@@ -59,6 +89,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AutoNumberConsole" />
+        <item itemvalue="Application.AutoNumber" />
         <item itemvalue="Application.counntTriple" />
       </list>
     </recent_temporary>
@@ -81,7 +113,35 @@
       <option name="project" value="LOCAL" />
       <updated>1648064286666</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="кодилити">
+      <created>1648068357627</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1648068357627</updated>
+    </task>
+    <task id="LOCAL-00003" summary="программа с блатными машинными номерами">
+      <created>1648331983942</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1648331983942</updated>
+    </task>
+    <task id="LOCAL-00004" summary="буду дальше думать, у 3-х последних методов 0 выводит. и sout должен быть в AutoNumberConsole">
+      <created>1648587634302</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1648587634302</updated>
+    </task>
+    <task id="LOCAL-00005" summary="буду дальше думать, у 3-х последних методов 0 выводит. и sout должен быть в AutoNumberConsole">
+      <created>1648587933540</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1648587933540</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -98,32 +158,50 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="кодилити" />
-    <option name="LAST_COMMIT_MESSAGE" value="кодилити" />
+    <MESSAGE value="программа с блатными машинными номерами" />
+    <MESSAGE value="решение вышло на 0%???" />
+    <MESSAGE value="буду дальше думать, у 3-х последних методов 0 выводит. и sout должен быть в AutoNumberConsole" />
+    <option name="LAST_COMMIT_MESSAGE" value="буду дальше думать, у 3-х последних методов 0 выводит. и sout должен быть в AutoNumberConsole" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="754" y="109" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1648325579736">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="754" y="109" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.728@0.0.1366.728" timestamp="1648325579736" />
     <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1647934314474">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1647934314474" />
-    <state width="1322" height="174" key="GridCell.Tab.0.bottom" timestamp="1645736675353">
+    <state width="1322" height="2" key="GridCell.Tab.0.bottom" timestamp="1648673055695">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1645736675353" />
-    <state width="1322" height="174" key="GridCell.Tab.0.center" timestamp="1645736675352">
+    <state width="1322" height="2" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1648673055695" />
+    <state width="1322" height="2" key="GridCell.Tab.0.center" timestamp="1648673055694">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1645736675352" />
-    <state width="1322" height="174" key="GridCell.Tab.0.left" timestamp="1645736675352">
+    <state width="1322" height="2" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1648673055694" />
+    <state width="1322" height="2" key="GridCell.Tab.0.left" timestamp="1648673055694">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1645736675352" />
-    <state width="1322" height="174" key="GridCell.Tab.0.right" timestamp="1645736675353">
+    <state width="1322" height="2" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1648673055694" />
+    <state width="1322" height="2" key="GridCell.Tab.0.right" timestamp="1648673055695">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1645736675353" />
+    <state width="1322" height="2" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1648673055695" />
     <state x="65" y="0" key="new project wizard" timestamp="1645736343411">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1645736343411" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Skill/AutoNumberConsole.java</url>
+          <line>5</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
