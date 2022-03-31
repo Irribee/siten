@@ -7,7 +7,6 @@
 //И сравнить, какой поиск занял наименьшее количество времени. long start= System.currentTimeMillis();
 //long duration=System.currentTimeMillis()-start
 
-
 package Skill;
 
 import java.util.*;
@@ -18,7 +17,7 @@ public class AutoNumber {
     TreeSet<String> trSet = new TreeSet<>();
     HashSet<String> hSet = new HashSet<>();
 
-    public void madeBasic() {
+    public void makeBasic() {
         String[] figure = {"111", "222", "333", "444", "555", "666", "777", "888", "999"};
         String[] letter = {"А", "В", "Е", "К", "М", "Н", "О", "Р", "С", "Т", "У", "Х"};
         for (int i = 0; i < letter.length; i++) {
@@ -33,6 +32,8 @@ public class AutoNumber {
                 }
             }
         }
+        trSet.addAll(autoNumber);
+        hSet.addAll(autoNumber);
     }
 
     public boolean enumeration(String eliteNumber) {
@@ -49,11 +50,14 @@ public class AutoNumber {
         return answer;
     }
 
+    public void makeBinary() {
+        Collections.sort(autoNumber);
+    }
 
     public boolean binarySearch(String eliteNumber) {
+        makeBinary();
         boolean answer;
         long duration = 0;
-        Collections.sort(autoNumber);
         long start = System.currentTimeMillis();
         int ind = Collections.binarySearch(autoNumber, eliteNumber);
         if (ind > 0) {
@@ -66,13 +70,7 @@ public class AutoNumber {
         return answer;
     }
 
-
-    public void makeTree() {
-        trSet.addAll(autoNumber);
-    }
-
     public boolean treeSearch(String eliteNumber) {
-        makeTree();
         boolean answer;
         long duration = 0;
         long start = System.currentTimeMillis();
@@ -87,12 +85,7 @@ public class AutoNumber {
     }
 
 
-    public void makeHash() {
-        hSet.addAll(autoNumber);
-    }
-
     public boolean hashSearch(String eliteNumber) {
-        makeHash();
         boolean answer;
         long duration = 0;
         long start = System.currentTimeMillis();

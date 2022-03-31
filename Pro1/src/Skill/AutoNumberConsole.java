@@ -7,7 +7,7 @@ public class AutoNumberConsole {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         AutoNumber auto = new AutoNumber();
-        auto.madeBasic();
+        auto.makeBasic();
         for (; ; ) {
             System.out.println("Enter the elite number of the car");
             String eliteNumber = scanner.nextLine();
