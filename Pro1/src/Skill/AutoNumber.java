@@ -37,16 +37,17 @@ public class AutoNumber {
     }
 
     public boolean enumeration(String eliteNumber) {
-        boolean answer;
+        boolean answer = false;
         long duration = 0;
-        long start = System.currentTimeMillis();
-        if (autoNumber.contains(eliteNumber)) {
-            duration = System.currentTimeMillis() - start;
-            answer = true;
-        } else {
-            answer = false;
+        long start = System.nanoTime();
+        for (int i = 0; i < 1000; i++) {
+            if (autoNumber.contains(eliteNumber)) {
+                duration = System.nanoTime();
+                answer = true;
+                continue;
+            }
         }
-        System.out.println(answer + " " + duration);
+        System.out.println(answer + " " + (duration - start));
         return answer;
     }
 
@@ -56,46 +57,49 @@ public class AutoNumber {
 
     public boolean binarySearch(String eliteNumber) {
         makeBinary();
-        boolean answer;
+        boolean answer = false;
         long duration = 0;
-        long start = System.currentTimeMillis();
+        long start = System.nanoTime();
         int ind = Collections.binarySearch(autoNumber, eliteNumber);
-        if (ind > 0) {
-            duration = System.currentTimeMillis() - start;
-            answer = true;
-        } else {
-            answer = false;
+        for (int i = 0; i < 1000; i++) {
+            if (ind > 0) {
+                duration = System.nanoTime();
+                answer = true;
+                continue;
+            }
         }
-        System.out.println(answer + " " + duration);
+        System.out.println(answer + " " + (duration - start));
         return answer;
     }
 
     public boolean treeSearch(String eliteNumber) {
-        boolean answer;
+        boolean answer = false;
         long duration = 0;
-        long start = System.currentTimeMillis();
-        if (trSet.contains(eliteNumber)) {
-            duration = System.currentTimeMillis() - start;
-            answer = true;
-        } else {
-            answer = false;
+        long start = System.nanoTime();
+        for (int i = 0; i < 1000; i++) {
+            if (trSet.contains(eliteNumber)) {
+                duration = System.nanoTime();
+                answer = true;
+                continue;
+            }
         }
-        System.out.println(answer + " " + duration);
+        System.out.println(answer + " " + (duration - start));
         return answer;
     }
 
 
     public boolean hashSearch(String eliteNumber) {
-        boolean answer;
+        boolean answer = false;
         long duration = 0;
-        long start = System.currentTimeMillis();
-        if (hSet.contains(eliteNumber)) {
-            duration = System.currentTimeMillis() - start;
-            answer = true;
-        } else {
-            answer = false;
+        long start = System.nanoTime();
+        for (int i = 0; i < 1000; i++) {
+            if (hSet.contains(eliteNumber)) {
+                duration = System.nanoTime();
+                answer = true;
+                continue;
+            }
         }
-        System.out.println(answer + " " + duration);
+        System.out.println(answer + " " + (duration - start));
         return answer;
     }
 }

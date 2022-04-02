@@ -19,12 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcf858b2-52cc-44e6-b3ed-1b68ba77b80c" name="Default Changelist" comment="буду дальше думать, у 3-х последних методов 0 выводит. и sout должен быть в AutoNumberConsole">
-      <change beforePath="$PROJECT_DIR$/../OOP/src/SimpleAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/src/SimpleAnimation.java" afterDir="false" />
+    <list default="true" id="bcf858b2-52cc-44e6-b3ed-1b68ba77b80c" name="Default Changelist" comment="все равно выводит 0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Codility/PermMissingElem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codility/PermMissingElem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Skill/AutoNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Skill/AutoNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Skill/AutoNumberConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Skill/AutoNumberConsole.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +138,21 @@
       <option name="project" value="LOCAL" />
       <updated>1648587933540</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="не работает">
+      <created>1648673368379</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1648673368379</updated>
+    </task>
+    <task id="LOCAL-00007" summary="все равно выводит 0">
+      <created>1648759537083</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1648759537083</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -161,7 +172,9 @@
     <MESSAGE value="программа с блатными машинными номерами" />
     <MESSAGE value="решение вышло на 0%???" />
     <MESSAGE value="буду дальше думать, у 3-х последних методов 0 выводит. и sout должен быть в AutoNumberConsole" />
-    <option name="LAST_COMMIT_MESSAGE" value="буду дальше думать, у 3-х последних методов 0 выводит. и sout должен быть в AutoNumberConsole" />
+    <MESSAGE value="не работает" />
+    <MESSAGE value="все равно выводит 0" />
+    <option name="LAST_COMMIT_MESSAGE" value="все равно выводит 0" />
   </component>
   <component name="WindowStateProjectService">
     <state x="754" y="109" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1648325579736">
@@ -172,36 +185,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1647934314474" />
-    <state width="1322" height="2" key="GridCell.Tab.0.bottom" timestamp="1648673055695">
+    <state width="1322" height="179" key="GridCell.Tab.0.bottom" timestamp="1648935842465">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="2" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1648673055695" />
-    <state width="1322" height="2" key="GridCell.Tab.0.center" timestamp="1648673055694">
+    <state width="1322" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1648935842465" />
+    <state width="1322" height="179" key="GridCell.Tab.0.center" timestamp="1648935842465">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="2" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1648673055694" />
-    <state width="1322" height="2" key="GridCell.Tab.0.left" timestamp="1648673055694">
+    <state width="1322" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1648935842465" />
+    <state width="1322" height="179" key="GridCell.Tab.0.left" timestamp="1648935842465">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="2" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1648673055694" />
-    <state width="1322" height="2" key="GridCell.Tab.0.right" timestamp="1648673055695">
+    <state width="1322" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1648935842465" />
+    <state width="1322" height="179" key="GridCell.Tab.0.right" timestamp="1648935842465">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="2" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1648673055695" />
+    <state width="1322" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1648935842465" />
     <state x="65" y="0" key="new project wizard" timestamp="1645736343411">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1645736343411" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Skill/AutoNumberConsole.java</url>
-          <line>5</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
