@@ -41,7 +41,10 @@ public class AutoNumber {
         long duration = 0;
         long start = System.nanoTime();
         for (int i = 0; i < 1000; i++) {
-            if (autoNumber.contains(eliteNumber)) {
+            if (!autoNumber.contains(eliteNumber)) {
+                start = 0;
+                break;
+            } else {
                 duration = System.nanoTime();
                 answer = true;
                 continue;
@@ -62,7 +65,10 @@ public class AutoNumber {
         long start = System.nanoTime();
         int ind = Collections.binarySearch(autoNumber, eliteNumber);
         for (int i = 0; i < 1000; i++) {
-            if (ind > 0) {
+            if (ind <= 0) {
+                start = 0;
+                break;
+            } else {
                 duration = System.nanoTime();
                 answer = true;
                 continue;
@@ -77,7 +83,10 @@ public class AutoNumber {
         long duration = 0;
         long start = System.nanoTime();
         for (int i = 0; i < 1000; i++) {
-            if (trSet.contains(eliteNumber)) {
+            if (!trSet.contains(eliteNumber)) {
+                start = 0;
+                break;
+            } else {
                 duration = System.nanoTime();
                 answer = true;
                 continue;
@@ -93,7 +102,10 @@ public class AutoNumber {
         long duration = 0;
         long start = System.nanoTime();
         for (int i = 0; i < 1000; i++) {
-            if (hSet.contains(eliteNumber)) {
+            if (!hSet.contains(eliteNumber)) {
+                start = 0;
+                break;
+            } else {
                 duration = System.nanoTime();
                 answer = true;
                 continue;
