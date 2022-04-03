@@ -14,6 +14,7 @@ import java.util.*;
 public class AutoNumber {
     ArrayList<String> autoNumber = new ArrayList<>();
     String number = "";
+    ArrayList<String> biArray = new ArrayList<>();
     TreeSet<String> trSet = new TreeSet<>();
     HashSet<String> hSet = new HashSet<>();
 
@@ -34,6 +35,7 @@ public class AutoNumber {
         }
         trSet.addAll(autoNumber);
         hSet.addAll(autoNumber);
+        biArray.addAll(autoNumber);
     }
 
     public boolean enumeration(String eliteNumber) {
@@ -54,16 +56,13 @@ public class AutoNumber {
         return answer;
     }
 
-    public void makeBinary() {
-        Collections.sort(autoNumber);
-    }
 
     public boolean binarySearch(String eliteNumber) {
-        makeBinary();
+        Collections.sort(biArray);
         boolean answer = false;
         long duration = 0;
         long start = System.nanoTime();
-        int ind = Collections.binarySearch(autoNumber, eliteNumber);
+        int ind = Collections.binarySearch(biArray, eliteNumber);
         for (int i = 0; i < 1000; i++) {
             if (ind <= 0) {
                 start = 0;
