@@ -14,7 +14,7 @@ import java.util.*;
 public class AutoNumber {
     ArrayList<String> autoNumber = new ArrayList<>();
     String number = "";
-    ArrayList<String> biArray = new ArrayList<>();
+    // ArrayList<String> biArray = new ArrayList<>();
     TreeSet<String> trSet = new TreeSet<>();
     HashSet<String> hSet = new HashSet<>();
 
@@ -35,7 +35,7 @@ public class AutoNumber {
         }
         trSet.addAll(autoNumber);
         hSet.addAll(autoNumber);
-        biArray.addAll(autoNumber);
+        //  biArray.addAll(autoNumber);
     }
 
     public boolean enumeration(String eliteNumber) {
@@ -49,7 +49,6 @@ public class AutoNumber {
             } else {
                 duration = System.nanoTime();
                 answer = true;
-                continue;
             }
         }
         System.out.println(answer + " " + (duration - start));
@@ -58,19 +57,19 @@ public class AutoNumber {
 
 
     public boolean binarySearch(String eliteNumber) {
-        Collections.sort(biArray);
+        Collections.sort(autoNumber);
         boolean answer = false;
         long duration = 0;
         long start = System.nanoTime();
-        int ind = Collections.binarySearch(biArray, eliteNumber);
+        //int ind = Collections.binarySearch(autoNumber, eliteNumber);
         for (int i = 0; i < 1000; i++) {
+            int ind = Collections.binarySearch(autoNumber, eliteNumber);
             if (ind <= 0) {
                 start = 0;
                 break;
             } else {
                 duration = System.nanoTime();
                 answer = true;
-                continue;
             }
         }
         System.out.println(answer + " " + (duration - start));
@@ -88,7 +87,6 @@ public class AutoNumber {
             } else {
                 duration = System.nanoTime();
                 answer = true;
-                continue;
             }
         }
         System.out.println(answer + " " + (duration - start));
@@ -107,7 +105,6 @@ public class AutoNumber {
             } else {
                 duration = System.nanoTime();
                 answer = true;
-                continue;
             }
         }
         System.out.println(answer + " " + (duration - start));
