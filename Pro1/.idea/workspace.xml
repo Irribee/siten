@@ -19,10 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcf858b2-52cc-44e6-b3ed-1b68ba77b80c" name="Default Changelist" comment="Вроде все правильно работает наконец-то">
+    <list default="true" id="bcf858b2-52cc-44e6-b3ed-1b68ba77b80c" name="Default Changelist" comment="итоговый">
+      <change beforePath="$PROJECT_DIR$/../OOP/src/BinaryGap.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/src/Codility/BinaryGap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/src/CyclicRotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/src/Codility/CyclicRotation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/src/OddOccurrencesInArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/src/Codility/OddOccurrencesInArray.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pro1/Skill/AutoNumber.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pro1/Skill/AutoNumber.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Skill/AutoNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Skill/AutoNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Codility/PermMissingElem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codility/PermMissingElem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +162,28 @@
       <option name="project" value="LOCAL" />
       <updated>1648936199767</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Вроде все правильно работает наконец-то">
+      <created>1648937019079</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1648937019079</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Вроде все правильно работает наконец-то">
+      <created>1649005606885</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1649005606885</updated>
+    </task>
+    <task id="LOCAL-00011" summary="итоговый">
+      <created>1649017573652</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1649017573653</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -183,7 +206,8 @@
     <MESSAGE value="не работает" />
     <MESSAGE value="все равно выводит 0" />
     <MESSAGE value="Вроде все правильно работает наконец-то" />
-    <option name="LAST_COMMIT_MESSAGE" value="Вроде все правильно работает наконец-то" />
+    <MESSAGE value="итоговый" />
+    <option name="LAST_COMMIT_MESSAGE" value="итоговый" />
   </component>
   <component name="WindowStateProjectService">
     <state x="754" y="109" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1648325579736">
@@ -194,22 +218,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1647934314474" />
-    <state width="1322" height="179" key="GridCell.Tab.0.bottom" timestamp="1648936221296">
+    <state width="1322" height="125" key="GridCell.Tab.0.bottom" timestamp="1649017582422">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1648936221295" />
-    <state width="1322" height="179" key="GridCell.Tab.0.center" timestamp="1648936221295">
+    <state width="1322" height="125" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1649017582422" />
+    <state width="1322" height="125" key="GridCell.Tab.0.center" timestamp="1649017582422">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1648936221295" />
-    <state width="1322" height="179" key="GridCell.Tab.0.left" timestamp="1648936221295">
+    <state width="1322" height="125" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1649017582422" />
+    <state width="1322" height="125" key="GridCell.Tab.0.left" timestamp="1649017582421">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1648936221295" />
-    <state width="1322" height="179" key="GridCell.Tab.0.right" timestamp="1648936221295">
+    <state width="1322" height="125" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1649017582421" />
+    <state width="1322" height="125" key="GridCell.Tab.0.right" timestamp="1649017582422">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1648936221295" />
+    <state width="1322" height="125" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1649017582422" />
     <state x="65" y="0" key="new project wizard" timestamp="1645736343411">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -1,4 +1,4 @@
-//A non-empty array A consisting of N integers is given. The array contains an odd number of elements, and each element of the array can be paired with another element that has the same value, except for one element that is left unpaired.
+package Codility;//A non-empty array A consisting of N integers is given. The array contains an odd number of elements, and each element of the array can be paired with another element that has the same value, except for one element that is left unpaired.
 //
 //For example, in array A such that:
 //
@@ -31,17 +31,24 @@ import java.util.Arrays;
 
 public class OddOccurrencesInArray {
     public int solution(int[] A) {
-        int unpairedNumber = 0;
+        int missingElem=0;
+        if (A.length==0){
+            return 1;
+        }
         Arrays.sort(A);
-        for (int i = 0; i < A.length; i++) {
-            if (i < A.length - 1 && A[i] == A[i + 1]) {
-                i++;
-                continue;
-            } else {
-                unpairedNumber = A[i];
+        for (int i=0;i<A.length;i++){
+            if(A[i]+1!=A[i+1]){
+                if (i==0){
+                    missingElem=A[i+1]-1;
+                    break;
+                }
+                else {
+                    missingElem= A[i]+1;
+                    break;
+                }
             }
         }
-        return unpairedNumber;
+        return missingElem;
     }
 }
 

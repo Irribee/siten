@@ -26,53 +26,19 @@
 import java.util.Arrays;
 
 public class PermMissingElem {
-  public int solution(int[] A) {
-      int missingElem=0;
-      if (A.length==0){
-            return 1;
-        }
-      Arrays.sort(A);
-      for (int i=0;i<A.length;i++){
-          if(A[i]+1!=A[i+1]){
-              if (i==0){
-                    missingElem=A[i+1]-1;
-                    break;
-                }
-                else {
-                    missingElem= A[i]+1;
-                    break;
-                }
+      public int solution(int[] A) {
+          if (A.length==0){
+              return 1;
           }
+          Arrays.sort(A);
+          if (A[0]==2) {
+              return  1;
           }
-      return missingElem;
+          for (int i=1;i<A.length;i++){
+              if(A[i]-A[i-1]>1){
+                  return A[i]-1;
+              }
+          }
+          return A[A.length-1] +1;
       }
   }
-
-
-
-//решение на 0%???
-//  package Codility;
-
-//public class PermMissingElem {
-//    public int solution(int[] A) {
-//        int missingElem=0;
-//        if (A.length==0){
-//            return 1;
-//        }
-//        else{
-//        for (int i=0;i<A.length-1;i++){
-//            if (A[i]+1!=A[i+1]){
-//                if (i==0){
-//                    missingElem=A[i+1]-1;
-//                    break;
-//                }
-//                else {
-//                    missingElem= A[i]+1;
-//                    break;
-//                }
-//            }
-//            }
-//        }
-//        return missingElem;
-//    }
-//}
