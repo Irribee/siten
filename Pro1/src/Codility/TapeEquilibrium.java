@@ -40,23 +40,54 @@ package Codility;
 //        N is an integer within the range [2..100,000];
 //        each element of array A is an integer within the range [−1,000..1,000].
 
+
 public class TapeEquilibrium {
     public int solution(int[] A) {
         int sumLeft = 0;
         int sumRight = 0;
-        int difference = 0;
-        int absDifference = 0;
-        for (int i = 0; i < A.length - 1; i++) {
-            sumRight = 0;
-            sumLeft += A[i];
-            for (int k = i + 1; k < A.length; k++) {
+        int difference = Integer.MAX_VALUE;
+        int absDifference;
+        if (A.length == 2) {
+            return Math.abs(A[0] - A[1]);
+        }
+        for (int i = 0; i < A.length; i++) {
+            sumLeft+=A[i];
+        }
+            for (int k = A.length-1; k >0; k--) {
+                sumLeft-=A[k];
                 sumRight += A[k];
-            }
             absDifference = Math.abs(sumLeft - sumRight);
-            if (difference == 0 || absDifference < difference) {
+            if (absDifference < difference) {
                 difference = absDifference;
             }
-        }
+            }
         return difference;
     }
 }
+
+
+
+//на 53%-TimeOut
+//public class TapeEquilibrium {
+//    public int solution(int[] A) {
+//        int sumLeft = 0;
+//        int sumRight = 0;
+//        int difference = Integer.MAX_VALUE;
+//        int absDifference = 0;
+//        if (A.length == 2) {
+//            return Math.abs(A[0] - A[1]);
+//        }
+//        for (int i = 0; i < A.length - 1; i++) {
+//            sumRight = 0;
+//            sumLeft += A[i];
+//            for (int k = i + 1; k < A.length; k++) {
+//                sumRight += A[k];
+//            }
+//            absDifference = Math.abs(sumLeft - sumRight);
+//            if (absDifference < difference) {
+//                difference = absDifference;
+//            }
+//        }
+//        return difference;
+//    }
+//}
