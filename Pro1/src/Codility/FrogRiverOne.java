@@ -46,6 +46,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
+
 // а это решение наконец то на 100%
 public class FrogRiverOne {
     public int solution(int X, int[] A) {
@@ -66,8 +67,7 @@ public class FrogRiverOne {
 }
 
 
-
-        //54% изза маленькой производительности
+//54% изза маленькой производительности
 //        int position = 0;
 //        int theEarliestTime = 0;
 //        ArrayList<Integer> newAr = new ArrayList<>();
