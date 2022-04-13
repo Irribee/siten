@@ -53,7 +53,7 @@ public class FrogRiverOne {
         for (int i = 0; i < A.length; i++) {
             if (!newAr.contains(A[i])) {
                 position = A[i];
-                newAr.add(position - 1, position);//ошибка в добавлении элемента, он должен быть Integer, он ведь int, но в данном случае же должен произойти boxing, почему этого не происходит?
+                newAr.add(position); //ошибка в добавлении элемента, он должен быть Integer, position ведь int, но в данном случае же должен произойти boxing, почему этого не происходит?
                 if (newAr.size() == X) {
                     theEarliestTime = i;
                     break;

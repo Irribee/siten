@@ -19,12 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcf858b2-52cc-44e6-b3ed-1b68ba77b80c" name="Default Changelist" comment="итоговый">
-      <change beforePath="$PROJECT_DIR$/../OOP/src/BinaryGap.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/src/Codility/BinaryGap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OOP/src/CyclicRotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/src/Codility/CyclicRotation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OOP/src/OddOccurrencesInArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/src/Codility/OddOccurrencesInArray.java" afterDir="false" />
+    <list default="true" id="bcf858b2-52cc-44e6-b3ed-1b68ba77b80c" name="Default Changelist" comment="FrogRiverOne пока никак не получается">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Codility/PermMissingElem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codility/PermMissingElem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Codility/FrogRiverOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codility/FrogRiverOne.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +180,28 @@
       <option name="project" value="LOCAL" />
       <updated>1649017573653</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="30% пока">
+      <created>1649279584282</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1649279584282</updated>
+    </task>
+    <task id="LOCAL-00013" summary="100%">
+      <created>1649607272808</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1649607272808</updated>
+    </task>
+    <task id="LOCAL-00014" summary="FrogRiverOne пока никак не получается">
+      <created>1649796930184</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1649796930184</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -207,7 +225,10 @@
     <MESSAGE value="все равно выводит 0" />
     <MESSAGE value="Вроде все правильно работает наконец-то" />
     <MESSAGE value="итоговый" />
-    <option name="LAST_COMMIT_MESSAGE" value="итоговый" />
+    <MESSAGE value="30% пока" />
+    <MESSAGE value="100%" />
+    <MESSAGE value="FrogRiverOne пока никак не получается" />
+    <option name="LAST_COMMIT_MESSAGE" value="FrogRiverOne пока никак не получается" />
   </component>
   <component name="WindowStateProjectService">
     <state x="754" y="109" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1648325579736">
