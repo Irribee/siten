@@ -44,25 +44,51 @@ package Codility;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-
+import java.util.Collections;
+import java.util.HashSet;
+// а это решение наконец то на 100%
 public class FrogRiverOne {
     public int solution(int X, int[] A) {
-        int position = 0;
         int theEarliestTime = 0;
-        ArrayList<Integer> newAr = new ArrayList<>();
+        HashSet<Integer> newAr = new HashSet<>();
         for (int i = 0; i < A.length; i++) {
-            if (!newAr.contains(A[i])) {
-                position = A[i];
-                newAr.add(position); //ошибка в добавлении элемента, он должен быть Integer, position ведь int, но в данном случае же должен произойти boxing, почему этого не происходит?
-                if (newAr.size() == X) {
-                    theEarliestTime = i;
-                    break;
-                }
+            newAr.add(A[i]);
+            if (newAr.size() == X) {
+                theEarliestTime = i;
+                break;
             }
+        }
+        if (newAr.size() != X) {
+            return -1;
         }
         return theEarliestTime;
     }
 }
+
+
+
+        //54% изза маленькой производительности
+//        int position = 0;
+//        int theEarliestTime = 0;
+//        ArrayList<Integer> newAr = new ArrayList<>();
+//        for (int i = 0; i < A.length; i++) {
+//            if (!newAr.contains(A[i])) {
+//                position = A[i];
+//                newAr.add(position); //ошибка в добавлении элемента, он должен быть Integer, position ведь int, но в данном случае же должен произойти boxing, почему этого не происходит?
+//                if (newAr.size() == X) {
+//                    theEarliestTime = i;
+//                    break;
+//                }
+//            }
+//        }
+//        if (newAr.size() != X){
+//            return -1;
+//        }
+//        return theEarliestTime;
+//    }
+//}
+
+
 //        int theEarliestTime = 0;
 //        int timeToJump = 0;
 //        // int num=0;
