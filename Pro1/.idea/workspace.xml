@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcf858b2-52cc-44e6-b3ed-1b68ba77b80c" name="Default Changelist" comment="PermCheck&#10;PassingCars">
+    <list default="true" id="bcf858b2-52cc-44e6-b3ed-1b68ba77b80c" name="Default Changelist" comment="Distinct">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -228,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650313940948</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Distinct">
+      <created>1650388607930</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1650388607930</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -257,7 +264,8 @@
     <MESSAGE value="FrogRiverOne пока никак не получается" />
     <MESSAGE value="FrogRiverOne получился" />
     <MESSAGE value="PermCheck&#10;PassingCars" />
-    <option name="LAST_COMMIT_MESSAGE" value="PermCheck&#10;PassingCars" />
+    <MESSAGE value="Distinct" />
+    <option name="LAST_COMMIT_MESSAGE" value="Distinct" />
   </component>
   <component name="WindowStateProjectService">
     <state x="754" y="109" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1648325579736">
