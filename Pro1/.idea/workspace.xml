@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcf858b2-52cc-44e6-b3ed-1b68ba77b80c" name="Default Changelist" comment="FrogRiverOne получился">
+    <list default="true" id="bcf858b2-52cc-44e6-b3ed-1b68ba77b80c" name="Default Changelist" comment="PermCheck&#10;PassingCars">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -221,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649884425536</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="PermCheck&#10;PassingCars">
+      <created>1650313940948</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1650313940948</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,7 +256,8 @@
     <MESSAGE value="100%" />
     <MESSAGE value="FrogRiverOne пока никак не получается" />
     <MESSAGE value="FrogRiverOne получился" />
-    <option name="LAST_COMMIT_MESSAGE" value="FrogRiverOne получился" />
+    <MESSAGE value="PermCheck&#10;PassingCars" />
+    <option name="LAST_COMMIT_MESSAGE" value="PermCheck&#10;PassingCars" />
   </component>
   <component name="WindowStateProjectService">
     <state x="754" y="109" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1648325579736">
