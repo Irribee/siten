@@ -19,8 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcf858b2-52cc-44e6-b3ed-1b68ba77b80c" name="Default Changelist" comment="Triangle 93% спросить у Пашки">
+    <list default="true" id="bcf858b2-52cc-44e6-b3ed-1b68ba77b80c" name="Default Changelist" comment="Brackets">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Codility/MaxProductOfThree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codility/MaxProductOfThree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +50,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../OOP" />
   </component>
-  <component name="RunManager" selected="Application.AutoNumberConsole">
+  <component name="RunManager" selected="Application.Salary">
     <configuration name="AutoNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Skill.AutoNumber" />
       <module name="Pro1" />
@@ -76,6 +77,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Salary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Skill.RegulaExpression.Salary" />
+      <module name="Pro1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Skill.RegulaExpression.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="counntTriple" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="counntTriple" />
       <module name="Pro1" />
@@ -85,6 +99,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Salary" />
         <item itemvalue="Application.AutoNumberConsole" />
         <item itemvalue="Application.AutoNumber" />
         <item itemvalue="Application.counntTriple" />
@@ -249,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650400275356</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Brackets">
+      <created>1650818928503</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1650818928503</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -281,9 +303,14 @@
     <MESSAGE value="Distinct" />
     <MESSAGE value="Distinct&#10;MaxProductOfThree" />
     <MESSAGE value="Triangle 93% спросить у Пашки" />
-    <option name="LAST_COMMIT_MESSAGE" value="Triangle 93% спросить у Пашки" />
+    <MESSAGE value="Brackets" />
+    <option name="LAST_COMMIT_MESSAGE" value="Brackets" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="125" y="257" width="433" height="222" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1650824267732">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="125" y="257" width="433" height="222" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1650824267732" />
     <state x="754" y="109" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1648325579736">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -292,22 +319,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1647934314474" />
-    <state width="1322" height="125" key="GridCell.Tab.0.bottom" timestamp="1649017582422">
+    <state width="1322" height="125" key="GridCell.Tab.0.bottom" timestamp="1650916159867">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="125" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1649017582422" />
-    <state width="1322" height="125" key="GridCell.Tab.0.center" timestamp="1649017582422">
+    <state width="1322" height="125" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1650916159867" />
+    <state width="1322" height="125" key="GridCell.Tab.0.center" timestamp="1650916159867">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="125" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1649017582422" />
-    <state width="1322" height="125" key="GridCell.Tab.0.left" timestamp="1649017582421">
+    <state width="1322" height="125" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1650916159867" />
+    <state width="1322" height="125" key="GridCell.Tab.0.left" timestamp="1650916159867">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="125" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1649017582421" />
-    <state width="1322" height="125" key="GridCell.Tab.0.right" timestamp="1649017582422">
+    <state width="1322" height="125" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1650916159867" />
+    <state width="1322" height="125" key="GridCell.Tab.0.right" timestamp="1650916159867">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="125" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1649017582422" />
+    <state width="1322" height="125" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1650916159867" />
     <state x="65" y="0" key="new project wizard" timestamp="1645736343411">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -40,7 +40,7 @@ package Codility;
 import java.util.Arrays;
 
 public class MaxProductOfThree {
-    public int solution(int[] A {
+    public int solution(int[] A) {
         int maxProduct = 0;
         Arrays.sort(A);
         int plusProduct = A[A.length - 1] * A[A.length - 2] * A[A.length - 3];
