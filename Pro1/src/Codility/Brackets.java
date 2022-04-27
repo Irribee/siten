@@ -19,32 +19,40 @@ package Codility;
 //        N is an integer within the range [0..200,000];
 //        string S consists only of the following characters: "(", "{", "[", "]", "}" and/or ")".
 
+import java.util.ArrayList;
 import java.util.Stack;
+
 
 public class Brackets {
     public int solution(String S) {
-        Stack<Character> mirror = new Stack<>();
+        ArrayList<Character> mirror = new ArrayList<>();
         int rightEx = 0;
         for (int i = 0; i < S.length(); i++) {
             char s = S.charAt(i);
             switch (s) {
                 case ')':
-                    if (mirror.isEmpty() || mirror.pop() != '(') {
+                    if (mirror.isEmpty() || mirror.get(mirror.size() - 1) != '(') {
                         return 0;
+                    } else {
+                        mirror.remove(mirror.size() - 1);
                     }
                     break;
                 case ']':
-                    if (mirror.isEmpty() || mirror.pop() != '[') {
+                    if (mirror.isEmpty() || mirror.get(mirror.size() - 1) != '[') {
                         return 0;
+                    } else {
+                        mirror.remove(mirror.size() - 1);
                     }
                     break;
                 case '}':
-                    if (mirror.isEmpty() || mirror.pop() != '{') {
+                    if (mirror.isEmpty() || mirror.get(mirror.size() - 1) != '{') {
                         return 0;
+                    } else {
+                        mirror.remove(mirror.size() - 1);
                     }
                     break;
                 default:
-                    mirror.push(s);
+                    mirror.add(s);
             }
         }
         if (mirror.isEmpty()) {
@@ -55,3 +63,39 @@ public class Brackets {
         return rightEx;
     }
 }
+
+
+//public class Brackets {
+//    public int solution(String S) {
+//        Stack<Character> mirror = new Stack<>();
+//        int rightEx = 0;
+//        for (int i = 0; i < S.length(); i++) {
+//            char s = S.charAt(i);
+//            switch (s) {
+//                case ')':
+//                    if (mirror.isEmpty() || mirror.pop() != '(') {
+//                        return 0;
+//                    }
+//                    break;
+//                case ']':
+//                    if (mirror.isEmpty() || mirror.pop() != '[') {
+//                        return 0;
+//                    }
+//                    break;
+//                case '}':
+//                    if (mirror.isEmpty() || mirror.pop() != '{') {
+//                        return 0;
+//                    }
+//                    break;
+//                default:
+//                    mirror.push(s);
+//            }
+//        }
+//        if (mirror.isEmpty()) {
+//            rightEx = 1;
+//        } else {
+//            rightEx = 0;
+//        }
+//        return rightEx;
+//    }
+//}

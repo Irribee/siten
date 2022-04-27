@@ -19,8 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcf858b2-52cc-44e6-b3ed-1b68ba77b80c" name="Default Changelist" comment="разбить текст на слова">
+    <list default="true" id="bcf858b2-52cc-44e6-b3ed-1b68ba77b80c" name="Default Changelist" comment="работает правильно, но есть вопрос к Пашке">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Codility/Brackets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codility/Brackets.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,9 +50,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../OOP" />
   </component>
-  <component name="RunManager" selected="Application.NumberPhone">
-    <configuration name="AutoNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Skill.AutoNumber" />
+  <component name="RunManager" selected="Application.Birthdays">
+    <configuration name="AutoNumberConsole" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Skill.AutoNumberConsole" />
       <module name="Pro1" />
       <extension name="coverage">
         <pattern>
@@ -63,8 +64,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AutoNumberConsole" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Skill.AutoNumberConsole" />
+    <configuration name="Birthdays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Skill.Birthdays" />
       <module name="Pro1" />
       <extension name="coverage">
         <pattern>
@@ -117,11 +118,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Birthdays" />
         <item itemvalue="Application.NumberPhone" />
         <item itemvalue="Application.EnglishWords" />
         <item itemvalue="Application.Salary" />
         <item itemvalue="Application.AutoNumberConsole" />
-        <item itemvalue="Application.AutoNumber" />
       </list>
     </recent_temporary>
   </component>
@@ -311,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650916930729</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="работает правильно, но есть вопрос к Пашке">
+      <created>1650995959356</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1650995959356</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -347,7 +355,8 @@
     <MESSAGE value="регулярные выражения для подсчета зп" />
     <MESSAGE value="все" />
     <MESSAGE value="разбить текст на слова" />
-    <option name="LAST_COMMIT_MESSAGE" value="разбить текст на слова" />
+    <MESSAGE value="работает правильно, но есть вопрос к Пашке" />
+    <option name="LAST_COMMIT_MESSAGE" value="работает правильно, но есть вопрос к Пашке" />
   </component>
   <component name="WindowStateProjectService">
     <state x="125" y="257" width="433" height="222" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1650824267732">
@@ -362,22 +371,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1647934314474" />
-    <state width="1322" height="125" key="GridCell.Tab.0.bottom" timestamp="1650917051652">
+    <state width="1322" height="125" key="GridCell.Tab.0.bottom" timestamp="1651087136896">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="125" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1650917051652" />
-    <state width="1322" height="125" key="GridCell.Tab.0.center" timestamp="1650917051651">
+    <state width="1322" height="125" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1651087136896" />
+    <state width="1322" height="125" key="GridCell.Tab.0.center" timestamp="1651087136896">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="125" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1650917051651" />
-    <state width="1322" height="125" key="GridCell.Tab.0.left" timestamp="1650917051651">
+    <state width="1322" height="125" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1651087136896" />
+    <state width="1322" height="125" key="GridCell.Tab.0.left" timestamp="1651087136896">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="125" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1650917051651" />
-    <state width="1322" height="125" key="GridCell.Tab.0.right" timestamp="1650917051651">
+    <state width="1322" height="125" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1651087136896" />
+    <state width="1322" height="125" key="GridCell.Tab.0.right" timestamp="1651087136896">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="125" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1650917051651" />
+    <state width="1322" height="125" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1651087136896" />
     <state x="65" y="0" key="new project wizard" timestamp="1645736343411">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
