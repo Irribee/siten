@@ -19,9 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcf858b2-52cc-44e6-b3ed-1b68ba77b80c" name="Default Changelist" comment="работает правильно, но есть вопрос к Пашке">
+    <list default="true" id="bcf858b2-52cc-44e6-b3ed-1b68ba77b80c" name="Default Changelist" comment="решение с помощью List">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Codility/Brackets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codility/Brackets.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -319,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650995959356</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="решение с помощью List">
+      <created>1651092835367</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1651092835367</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -356,7 +362,8 @@
     <MESSAGE value="все" />
     <MESSAGE value="разбить текст на слова" />
     <MESSAGE value="работает правильно, но есть вопрос к Пашке" />
-    <option name="LAST_COMMIT_MESSAGE" value="работает правильно, но есть вопрос к Пашке" />
+    <MESSAGE value="решение с помощью List" />
+    <option name="LAST_COMMIT_MESSAGE" value="решение с помощью List" />
   </component>
   <component name="WindowStateProjectService">
     <state x="125" y="257" width="433" height="222" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1650824267732">
@@ -371,22 +378,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1647934314474" />
-    <state width="1322" height="125" key="GridCell.Tab.0.bottom" timestamp="1651087136896">
+    <state width="1322" height="122" key="GridCell.Tab.0.bottom" timestamp="1651093294456">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="125" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1651087136896" />
-    <state width="1322" height="125" key="GridCell.Tab.0.center" timestamp="1651087136896">
+    <state width="1322" height="122" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1651093294456" />
+    <state width="1322" height="122" key="GridCell.Tab.0.center" timestamp="1651093294456">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="125" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1651087136896" />
-    <state width="1322" height="125" key="GridCell.Tab.0.left" timestamp="1651087136896">
+    <state width="1322" height="122" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1651093294456" />
+    <state width="1322" height="122" key="GridCell.Tab.0.left" timestamp="1651093294456">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="125" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1651087136896" />
-    <state width="1322" height="125" key="GridCell.Tab.0.right" timestamp="1651087136896">
+    <state width="1322" height="122" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1651093294456" />
+    <state width="1322" height="122" key="GridCell.Tab.0.right" timestamp="1651093294456">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="125" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1651087136896" />
+    <state width="1322" height="122" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1651093294456" />
     <state x="65" y="0" key="new project wizard" timestamp="1645736343411">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
