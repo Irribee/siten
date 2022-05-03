@@ -19,8 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcf858b2-52cc-44e6-b3ed-1b68ba77b80c" name="Default Changelist" comment="решение с помощью List">
+    <list default="true" id="bcf858b2-52cc-44e6-b3ed-1b68ba77b80c" name="Default Changelist" comment="не получается со стеком">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Codility/Fish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codility/Fish.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -325,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651092835367</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="не получается со стеком">
+      <created>1651259164519</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1651259164519</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -363,7 +371,8 @@
     <MESSAGE value="разбить текст на слова" />
     <MESSAGE value="работает правильно, но есть вопрос к Пашке" />
     <MESSAGE value="решение с помощью List" />
-    <option name="LAST_COMMIT_MESSAGE" value="решение с помощью List" />
+    <MESSAGE value="не получается со стеком" />
+    <option name="LAST_COMMIT_MESSAGE" value="не получается со стеком" />
   </component>
   <component name="WindowStateProjectService">
     <state x="125" y="257" width="433" height="222" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1650824267732">

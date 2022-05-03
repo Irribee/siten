@@ -43,79 +43,86 @@ import java.util.Stack;
 //        the elements of A are all distinct.
 
 
-
-// это была первая попытка и здесь я не учла того, что в самом начале массива А могут быть 0, и их я не сравниваю со стеком, в котором единички.
-// а еще у нас сначала в стек может попасть более крупная рыба(например, 6), а за ней мелкая(например, 3), а потом попадется рыба с противоположным движением со значением, например, 4. И номер 3 она съест, и по
-//моему коду будет просто 3 удалена из стека и мы переходим к следующему уже элементу массива, т.е. не учтено то, что в стеке номер 6 может съесть этот номер 3.
-public class Fish {
-public int solution(int[] A, int[] B) {
-        Stack <Integer> stack=new Stack<>();
-        int countFish=A.length;
-        for (int i=0;i<A.length;i++){
-            if (B[i]==1){
-                stack.push(A[i]);
-            }
-            if (!stack.isEmpty() && stack.peek()<A[i]){
-                stack.pop();
-                countFish--;
-            }
-            else if (!stack.isEmpty() && stack.peek()>A[i]){
-                countFish--;
-            }
-        }
-        return countFish;
-    }
-}
-
-
-
-//Здесь я ввела переменную number, которая означает первую "встречу" единички. И потом, в цикле  for (int j=0;j<number;j++){
-//     if (!stack.isEmpty() && stack.peek()<A[j]){
-//       stack.pop();
-//       countFish--;
-//     }
-//     else if (!stack.isEmpty() && stack.peek()>A[j]){
-//         countFish--;
-//     }
-//    }
-//как раз то, что осталось в стеке сравнивается с первыми 0 из массива. Но уже код стал трудночитаем. Значит это не подходит
-
+//робовала написать код, чтобы учитывать такой случай:
+//А[4,3,2,1,7,5,8,6]
+//B[0,1,0,0,0,0,1,0], т е [4↑,3↓,2↑,1↑,7↑,5↑,8↓,6↑]
 public class Fish {
     public int solution(int[] A, int[] B) {
-        Stack <Integer> stack=new Stack<>();
-        // Stack <Integer> stack2=new Stack<>();
-        int countFish=A.length;
-        int number=0;
-        for (int k=0;k<B.length;k++){
-            if (B[k]==1){
-                number=k;
-                break;
+        Stack<Integer> stackDn = new Stack<>();
+        Stack<Integer> stackUp = new Stack<>();
+        int countFish = A.length;
+        for (int i = 0; i < A.length; i++) {
+            if (B[i] == 1) {
+                stackDn.push(A[i]);
             }
-        }
-        for (int i=0;i<A.length;i++){
-            if (B[i]==1){
-                stack.push(A[i]);
-                continue;
-            }
-            if (!stack.isEmpty() && stack.peek()<A[i]){
-                stack.pop();
-                countFish--;
-            }
-            else if (!stack.isEmpty() && stack.peek()>A[i]){
-                countFish--;
-            }
-        }
-        if(number>0){
-            for (int j=0;j<number;j++){
-                if (!stack.isEmpty() && stack.peek()<A[j]){
-                    stack.pop();
+            if (!stackDn.isEmpty()) {
+                if (!stackUp.isEmpty()) {
+                    do {
+                        if (stackDn.peek() < stackUp.peek()) {
+                            stackDn.pop();
+                            countFish--;
+                        } else if (stackDn.peek() > stackUp.peek()) {
+                            stackUp.pop();
+                            countFish--;
+                        }
+                    }
+                    while (stackDn.isEmpty() || stackUp.isEmpty());
+                } else if (stackDn.peek() < A[i]) {
+                    stackDn.pop();
+                    stackUp.push(A[i]);
                     countFish--;
-                }
-                else if (!stack.isEmpty() && stack.peek()>A[j]){
+                    continue;
+                } else if (stackDn.peek() > A[i]) {
                     countFish--;
+                    continue;
                 }
+            } else if (!stackUp.isEmpty() && B[i] == 0) {
+                stackUp.push(A[i]);
             }
         }
         return countFish;
     }
 }
+
+
+//public class Fish {
+//    public int solution(int[] A, int[] B) {
+//        Stack<Integer> stackDn = new Stack<>();
+//        Stack<Integer> stackUp = new Stack<>();
+//        int countFish = A.length;
+//        for (int i = 0; i < A.length; i++) {
+//            if (B[i] == 1) {
+//                stackDn.push(A[i]);
+//            }
+//            if (!stackDn.isEmpty()) {
+//                if (!stackUp.isEmpty()) {
+//                    if (stackDn.peek() < stackUp.peek()) {
+//                        stackDn.pop();
+//                        countFish--;
+//                        continue;
+//                    } else if (stackDn.peek() > stackUp.peek()) {
+//                        stackUp.pop();
+//                        countFish--;
+//                        continue;
+//                    }
+//                } else if (stackDn.peek() < A[i]) {
+//                    stackDn.pop();
+//                    stackUp.push(A[i]);
+//                    countFish--;
+//                    continue;
+//                } else if (stackDn.peek() > A[i]) {
+//                    countFish--;
+//                    continue;
+//                }
+//            }
+//            else if (!stackUp.isEmpty()){
+//                if (B[i]==0){
+//                    stackUp.push(A[i]);
+//                }
+//            }
+//        }
+//        return countFish;
+//    }
+//}
+
+
