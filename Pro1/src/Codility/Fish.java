@@ -42,87 +42,26 @@ import java.util.Stack;
 //        each element of array B is an integer that can have one of the following values: 0, 1;
 //        the elements of A are all distinct.
 
-
-//робовала написать код, чтобы учитывать такой случай:
-//А[4,3,2,1,7,5,8,6]
-//B[0,1,0,0,0,0,1,0], т е [4↑,3↓,2↑,1↑,7↑,5↑,8↓,6↑]
 public class Fish {
     public int solution(int[] A, int[] B) {
         Stack<Integer> stackDn = new Stack<>();
-        Stack<Integer> stackUp = new Stack<>();
         int countFish = A.length;
         for (int i = 0; i < A.length; i++) {
             if (B[i] == 1) {
                 stackDn.push(A[i]);
-            }
-            if (!stackDn.isEmpty()) {
-                if (!stackUp.isEmpty()) {
-                    do {
-                        if (stackDn.peek() < stackUp.peek()) {
-                            stackDn.pop();
-                            countFish--;
-                        } else if (stackDn.peek() > stackUp.peek()) {
-                            stackUp.pop();
-                            countFish--;
-                        }
+            } else {
+                while (!stackDn.isEmpty()) {
+
+                    if (A[i] < stackDn.peek()) {
+                        countFish--;
+                        break;
+                    } else if (A[i] > stackDn.peek()) {
+                        stackDn.pop();
+                        countFish--;
                     }
-                    while (stackDn.isEmpty() || stackUp.isEmpty());
-                } else if (stackDn.peek() < A[i]) {
-                    stackDn.pop();
-                    stackUp.push(A[i]);
-                    countFish--;
-                    continue;
-                } else if (stackDn.peek() > A[i]) {
-                    countFish--;
-                    continue;
                 }
-            } else if (!stackUp.isEmpty() && B[i] == 0) {
-                stackUp.push(A[i]);
             }
         }
         return countFish;
     }
 }
-
-
-//public class Fish {
-//    public int solution(int[] A, int[] B) {
-//        Stack<Integer> stackDn = new Stack<>();
-//        Stack<Integer> stackUp = new Stack<>();
-//        int countFish = A.length;
-//        for (int i = 0; i < A.length; i++) {
-//            if (B[i] == 1) {
-//                stackDn.push(A[i]);
-//            }
-//            if (!stackDn.isEmpty()) {
-//                if (!stackUp.isEmpty()) {
-//                    if (stackDn.peek() < stackUp.peek()) {
-//                        stackDn.pop();
-//                        countFish--;
-//                        continue;
-//                    } else if (stackDn.peek() > stackUp.peek()) {
-//                        stackUp.pop();
-//                        countFish--;
-//                        continue;
-//                    }
-//                } else if (stackDn.peek() < A[i]) {
-//                    stackDn.pop();
-//                    stackUp.push(A[i]);
-//                    countFish--;
-//                    continue;
-//                } else if (stackDn.peek() > A[i]) {
-//                    countFish--;
-//                    continue;
-//                }
-//            }
-//            else if (!stackUp.isEmpty()){
-//                if (B[i]==0){
-//                    stackUp.push(A[i]);
-//                }
-//            }
-//        }
-//        return countFish;
-//    }
-//}
-
-
