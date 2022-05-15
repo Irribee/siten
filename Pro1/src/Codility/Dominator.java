@@ -64,7 +64,7 @@ public class Dominator {
         return -1;
     }
 }
-
+//минус этого решения, что она непродуктивное и цифра ) может быть доминатором, но у меня тогда в данном случае будет возвращено -1
 //в кодилите было написано вот это:
 //The following issues have been detected: wrong answers.For example, for the input [2147483647] the solution returned a wrong answer (got -1, but dominator exists, for example on position 0).
 //Как я поняла, должна возвращаться цифра, которая встречается в больше, чем половина длина массива количества раз, но тут 0 элемент же цифра 2, которая только 1 раз повторяется
