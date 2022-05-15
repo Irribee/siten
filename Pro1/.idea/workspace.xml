@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcf858b2-52cc-44e6-b3ed-1b68ba77b80c" name="Default Changelist" comment="не получается со стеком">
+    <list default="true" id="bcf858b2-52cc-44e6-b3ed-1b68ba77b80c" name="Default Changelist" comment="Fishing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -339,7 +339,28 @@
       <option name="project" value="LOCAL" />
       <updated>1651581275407</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Nesting. Обычные скобочки">
+      <created>1651599659671</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1651599659671</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Nesting. Обычные скобочки">
+      <created>1651599679487</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1651599679487</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Fishing">
+      <created>1652562026565</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1652562026565</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -378,7 +399,9 @@
     <MESSAGE value="работает правильно, но есть вопрос к Пашке" />
     <MESSAGE value="решение с помощью List" />
     <MESSAGE value="не получается со стеком" />
-    <option name="LAST_COMMIT_MESSAGE" value="не получается со стеком" />
+    <MESSAGE value="Nesting. Обычные скобочки" />
+    <MESSAGE value="Fishing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fishing" />
   </component>
   <component name="WindowStateProjectService">
     <state x="125" y="257" width="433" height="222" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1650824267732">
