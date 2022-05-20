@@ -38,14 +38,18 @@ public class TaskList implements Doing {
     }
 
     @Override
-    public void taskList() {
+    public Task getTaskList() {
+        Task list = null;
         for (Task t : taskList) {
-            System.out.println(t);
+            list=t;
+            System.out.println(list);
         }
+        return list;
     }
 
     @Override
     public String report() {
+
         return null;
     }
 }

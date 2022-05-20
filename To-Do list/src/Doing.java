@@ -5,7 +5,7 @@ public interface Doing {
 
     public void setStatus(Task statusTask);
 
-    public void taskList();
+    public Task getTaskList();
 
     public String report();
 }

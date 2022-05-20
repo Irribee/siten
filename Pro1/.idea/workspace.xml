@@ -21,6 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="bcf858b2-52cc-44e6-b3ed-1b68ba77b80c" name="Default Changelist" comment="Dominator">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../To-Do list/src/Doing.java" beforeDir="false" afterPath="$PROJECT_DIR$/../To-Do list/src/Doing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../To-Do list/src/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/../To-Do list/src/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../To-Do list/src/TaskList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../To-Do list/src/TaskList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

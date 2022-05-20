@@ -1,4 +1,5 @@
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class Task {
     //public static void main(String[] args) {
@@ -17,6 +18,7 @@ public class Task {
     }
 
     public int getId() {
+
         return id;
     }
 
@@ -25,19 +27,25 @@ public class Task {
         nextId++;
     }
 
-    public Calendar getDate() {
-        return date;
+    public void setDate(int year, int month, int dayOfMonth) {
+        GregorianCalendar calendar = new GregorianCalendar();
+        calendar.set(Calendar.YEAR, year);
+        calendar.set(Calendar.MONTH, month);
+        calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+
     }
 
     public String getText() {
+
         return text;
     }
 
-    public String getStatus() {
-        return status;
+    public void setText(String t) {
+        text = t;
     }
 
-    public static void main(String[] args) {
+    public String getStatus() {
 
+        return status;
     }
 }
