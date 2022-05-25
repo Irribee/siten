@@ -1,21 +1,22 @@
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.Scanner;
 
 public class Task {
-    //public static void main(String[] args) {
-    private static int nextId = 1;
 
-    private int id;
-    private Calendar date;
-    private String text;
-    private String status;
+    static int nextId = 1;
+    int id;
+    Calendar date;
+    String text;
+    String status;
 
-    public Task(int id, Calendar date, String text, String status) {
-        this.id = id;
-        this.date = date;
-        this.text = text;
-        this.status = status;
-    }
+//    Task(int id, String text, Calendar date, String status) {
+//        this.id = id;
+//        this.date = date;
+//        this.text = text;
+//        this.status = status;
+//    }
 
     public int getId() {
 
@@ -47,5 +48,9 @@ public class Task {
     public String getStatus() {
 
         return status;
+    }
+
+    public void setStatus(String s) {
+        status = s;
     }
 }

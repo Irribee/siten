@@ -1,53 +1,38 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
-public class TaskList implements Doing {
-    //public static void main(String[] args) {
+public class TaskList extends Task {
 
-    //    ArrayList<Task> taskList = new ArrayList<>();
-//        for (Task t : taskList) {
-//            if (t.getStatus().equals("new")) {
-//                t.addTask();
-//            } else if (t.getStatus().equals("in progress")) {
-//
-//            } else if (t.getStatus().equals("done")) {
-//                t.removeTask();
-//            }
-//            public void addTask () {
-//                textTask = t.getText();
-//                taskList.add(textTask);
-//
-//        }
-//    }
-    ArrayList<Task> taskList = new ArrayList<>();
+    ArrayList<String> taskList = new ArrayList<>();
 
-    @Override
-    public boolean addTask(Task textTask) {
+    public boolean addTask(String textTask) {
         taskList.add(textTask);
         return true;
     }
 
-    @Override
-    public boolean removeTask(Task textTask) {
-        taskList.remove(textTask);
+
+    public boolean removeTask(String taskRemove) {
+        taskList.remove(taskRemove);
         return true;
     }
 
-    @Override
-    public void setStatus(Task statusTask) {
-//??????
+
+    public void setStatus(String taskChangeStatus) {
+
+        status = taskChangeStatus;
     }
 
-    @Override
-    public Task getTaskList() {
-        Task list = null;
-        for (Task t : taskList) {
-            list=t;
+
+    public String getTaskList() {
+        String list = null;
+        for (String t : taskList) {
+            list = t;
             System.out.println(list);
         }
         return list;
     }
 
-    @Override
+
     public String report() {
 
         return null;
