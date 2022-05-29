@@ -7,7 +7,6 @@ import java.util.Scanner;
 public class ConsoleTodo {
     public static void main(String[] args) {
         TaskList taskList = new TaskList();
-        // Task textTask=new Task;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Здравствуйте");
         for (; ; ) {
@@ -24,20 +23,28 @@ public class ConsoleTodo {
                     int month = scanner.nextInt();
                     System.out.println("число");
                     int date = scanner.nextInt();
-                    Calendar finishDay = new GregorianCalendar(year, month, date);
-                    //taskList.setStatus("new");неправильно
-                    String task = new Task(textTask, finishDay); //как в конструктор здесь добавить статус и id, ведь он присваивается уже объекту, а если их вообще не писать в конструктор, то как можно поменять статус?
+                    // Calendar finishDay = new GregorianCalendar(year, month, date);
+                    System.out.println("Введите id задачи");
+                    int idTask = scanner.nextInt();
+                    Task task = new Task();
+                    //task = taskList.getTask(idTask);
+                    //Task task = new Task(idTask, textTask, finishDay,"new");
+                    task.setStatus("new");
+                    task.setId(idTask);
+                    task.setDate(year, month, date);
+                    task.setText(textTask);
                     taskList.addTask(task);
                     break;
                 case "Удалить задачу":
-                    System.out.println("Введите текст задачи, которую вы хотите удалить");
-                    String taskDelete = scanner.nextLine();
+                    System.out.println("Введите id задачи(id присваивается задаче по порядку, начиная с 1), которую вы хотите удалить");
+                    int taskDelete = scanner.nextInt();
+                    //taskList.getTask(taskDelete);
                     taskList.removeTask(taskDelete);
                     break;
                 case "Изменить статус задачи":
-                    System.out.println("Введите текст задачи,статус которой вы хотели бы изменить");
-                    String taskStatus = scanner.nextLine();
-                    taskList.getStatus(taskStatus);//неправильно
+                    System.out.println("Введите id задачи,статус которой вы хотели бы изменить");
+                    int taskStatus = scanner.nextInt();
+                    taskList.getTask(taskStatus);
                     System.out.println("Введите новый статус задачи");
                     String taskChangeStatus = scanner.nextLine();
                     taskList.setStatus(taskChangeStatus);//неправильно
@@ -45,6 +52,7 @@ public class ConsoleTodo {
                 case "Вывести весь список задач":
                     taskList.getTaskList();
                     break;
+
 
             }
         }

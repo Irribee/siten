@@ -5,15 +5,33 @@ public class TaskList {
 
     ArrayList<Task> taskList = new ArrayList<>();
 
-    public boolean addTask(String textTask) {
+    public boolean addTask(Task textTask) {
         taskList.add(textTask);
         return true;
     }
 
+    public Task getTask(int taskId) {
+        Task desiredTask = null;
+        for (int i = 0; i < taskList.size(); i++) {
+            if (i == taskId - 1) {
+                desiredTask = taskList.get(i);
+            }
+        }
+        return desiredTask;
+    }
 
-    public boolean removeTask(String taskRemove) {
-        taskList.remove(taskRemove);
-        return true;
+    public Task removeTask(int idRemove) {
+//        for (Task t : taskList) {
+//
+//        }
+        Task taskDelete = null;
+        for (int i = 0; i < taskList.size(); i++) {
+            if (i == idRemove - 1) {
+                taskDelete = taskList.get(i);
+                taskList.remove(taskDelete);
+            }
+        }
+        return taskDelete;
     }
 
 

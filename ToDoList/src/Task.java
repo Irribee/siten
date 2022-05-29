@@ -11,21 +11,26 @@ public class Task {
     String text;
     String status;
 
-    Task(int id, String text, Calendar date, String status) {
-        this.id = id;
-        this.date = date;
-        this.text = text;
-        this.status = status;
-    }
+//    Task() {
+//
+//    }
+//
+//    Task(int id, String text, Calendar date, String status) {
+//        this.id = id;
+//        this.date = date;
+//        this.text = text;
+//        this.status = status;
+//    }
 
     public int getId() {
 
         return id;
     }
 
-    public void setId() {
-        id = nextId;
-        nextId++;
+    public void setId(int giveId) {
+        id = giveId;
+//        id = nextId;
+//        nextId++;
     }
 
     public void setDate(int year, int month, int dayOfMonth) {
