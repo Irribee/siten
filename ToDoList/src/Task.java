@@ -11,12 +11,12 @@ public class Task {
     String text;
     String status;
 
-//    Task(int id, String text, Calendar date, String status) {
-//        this.id = id;
-//        this.date = date;
-//        this.text = text;
-//        this.status = status;
-//    }
+    Task(int id, String text, Calendar date, String status) {
+        this.id = id;
+        this.date = date;
+        this.text = text;
+        this.status = status;
+    }
 
     public int getId() {
 
@@ -42,6 +42,7 @@ public class Task {
     }
 
     public void setText(String t) {
+
         text = t;
     }
 
@@ -51,6 +52,7 @@ public class Task {
     }
 
     public void setStatus(String s) {
+
         status = s;
     }
 }

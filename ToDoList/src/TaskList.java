@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class TaskList extends Task {
+public class TaskList {
 
-    ArrayList<String> taskList = new ArrayList<>();
+    ArrayList<Task> taskList = new ArrayList<>();
 
     public boolean addTask(String textTask) {
         taskList.add(textTask);
@@ -17,15 +17,14 @@ public class TaskList extends Task {
     }
 
 
-    public void setStatus(String taskChangeStatus) {
+//    public void setStatus(String taskChangeStatus) {
+//      String  status = taskChangeStatus;
+//    }
 
-        status = taskChangeStatus;
-    }
 
-
-    public String getTaskList() {
-        String list = null;
-        for (String t : taskList) {
+    public Task getTaskList() {
+        Task list = null;
+        for (Task t : taskList) {
             list = t;
             System.out.println(list);
         }
