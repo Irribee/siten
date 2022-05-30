@@ -29,7 +29,7 @@ public class ConsoleTodo {
                     Task task = new Task();
                     //task = taskList.getTask(idTask);
                     //Task task = new Task(idTask, textTask, finishDay,"new");
-                    task.setStatus("new");
+                    task.setStatus("новая");
                     task.setId(idTask);
                     task.setDate(year, month, date);
                     task.setText(textTask);
@@ -37,23 +37,20 @@ public class ConsoleTodo {
                     break;
                 case "Удалить задачу":
                     System.out.println("Введите id задачи(id присваивается задаче по порядку, начиная с 1), которую вы хотите удалить");
-                    int taskDelete = scanner.nextInt();
+                    int idDelete = scanner.nextInt();
                     //taskList.getTask(taskDelete);
-                    taskList.removeTask(taskDelete);
+                    taskList.removeTask(idDelete);
                     break;
                 case "Изменить статус задачи":
                     System.out.println("Введите id задачи,статус которой вы хотели бы изменить");
-                    int taskStatus = scanner.nextInt();
-                    taskList.getTask(taskStatus);
-                    System.out.println("Введите новый статус задачи");
-                    String taskChangeStatus = scanner.nextLine();
-                    taskList.setStatus(taskChangeStatus);//неправильно
+                    int idChangeStatus = scanner.nextInt();
+                    System.out.println("Введите новый статус задачи:\n в работе \n сделано");
+                    String newStatus=scanner.nextLine();
+                    taskList.getTask(idChangeStatus).setStatus(newStatus);
                     break;
                 case "Вывести весь список задач":
                     taskList.getTaskList();
                     break;
-
-
             }
         }
     }

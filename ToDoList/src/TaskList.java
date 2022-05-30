@@ -34,12 +34,6 @@ public class TaskList {
         return taskDelete;
     }
 
-
-//    public void setStatus(String taskChangeStatus) {
-//      String  status = taskChangeStatus;
-//    }
-
-
     public Task getTaskList() {
         Task list = null;
         for (Task t : taskList) {
