@@ -30,10 +30,10 @@ public class ConsoleTodo {
                     //task = taskList.getTask(idTask);
                     //Task task = new Task(idTask, textTask, finishDay,"new");
                     task.setStatus("новая");//мне кажется где-то здесь ошибка
-                    task.setId(idTask);
+                    // task.setId(idTask);
                     task.setDate(year, month, date);
                     task.setText(textTask);
-                    taskList.addTask(task);
+                    taskList.addTask(idTask, task);
                     break;
                 case "Удалить задачу":
                     System.out.println("Введите id задачи(id присваивается задаче по порядку, начиная с 1), которую вы хотите удалить");
@@ -45,11 +45,11 @@ public class ConsoleTodo {
                     System.out.println("Введите id задачи,статус которой вы хотели бы изменить");
                     int idChangeStatus = scanner.nextInt();
                     System.out.println("Введите новый статус задачи:\n в работе \n сделано");
-                    String newStatus=scanner.nextLine();
+                    String newStatus = scanner.nextLine();
                     taskList.getTask(idChangeStatus).setStatus(newStatus);
                     break;
                 case "Вывести весь список задач":
-                    taskList.getTaskList();
+                    taskList.printTaskList();
                     break;
             }
         }
