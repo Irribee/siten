@@ -16,20 +16,16 @@ public class TaskList {
         Task desiredTask = taskList.get(taskId);
         return desiredTask;
     }
-//        Task desiredTask = null;
-//        for (int i = 0; i < taskList.size(); i++) {
-//            if (i == taskId - 1) {
-//                desiredTask = taskList.get(i);
-//            }
-//        }
-//        return desiredTask;
-//    }
 
     public void removeTask(int idRemove) {
         taskList.remove(idRemove);
 
     }
 
+    //    public void printTaskList(Map<Integer, Task> map) {
+//        for (Integer key: map.keySet()){
+//        System.out.println(key+" "+map.get(key);
+//    }
     public void printTaskList() {
         System.out.println(taskList);
     }
