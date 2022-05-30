@@ -29,7 +29,7 @@ public class ConsoleTodo {
                     Task task = new Task();
                     //task = taskList.getTask(idTask);
                     //Task task = new Task(idTask, textTask, finishDay,"new");
-                    task.setStatus("новая");
+                    task.setStatus("новая");//мне кажется где-то здесь ошибка
                     task.setId(idTask);
                     task.setDate(year, month, date);
                     task.setText(textTask);
