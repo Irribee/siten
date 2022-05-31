@@ -27,11 +27,12 @@ public class TaskList {
 //        System.out.println(key+" "+map.get(key);
 //    }
     public void printTaskList() {
-        System.out.println(taskList);
+        for (Map.Entry entry : taskList.entrySet())
+            System.out.println(entry);
     }
 
     public String report() {
-
+//?????
         return null;
     }
 }

@@ -23,20 +23,16 @@ public class ConsoleTodo {
                     int month = scanner.nextInt();
                     System.out.println("число");
                     int date = scanner.nextInt();
-                    // Calendar finishDay = new GregorianCalendar(year, month, date);
                     System.out.println("Введите id задачи");
                     int idTask = scanner.nextInt();
                     Task task = new Task();
-                    //task = taskList.getTask(idTask);
-                    //Task task = new Task(idTask, textTask, finishDay,"new");
-                    task.setStatus("новая");//мне кажется где-то здесь ошибка
-                    // task.setId(idTask);
+                    task.setStatus("новая");
                     task.setDate(year, month, date);
                     task.setText(textTask);
                     taskList.addTask(idTask, task);
                     break;
                 case "Удалить задачу":
-                    System.out.println("Введите id задачи(id присваивается задаче по порядку, начиная с 1), которую вы хотите удалить");
+                    System.out.println("Введите id задачи, которую вы хотите удалить");
                     int idDelete = scanner.nextInt();
                     //taskList.getTask(taskDelete);
                     taskList.removeTask(idDelete);
