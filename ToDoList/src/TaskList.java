@@ -27,9 +27,27 @@ public class TaskList {
 //        System.out.println(key+" "+map.get(key);
 //    }
     public void printTaskList() {
-        for (Map.Entry entry : taskList.entrySet())
-            System.out.println(entry);
+        System.out.println(taskList);
     }
+    //  System.out.println(taskList.keySet() + "=" + taskList.values());
+//        for (Integer name : taskList.keySet())
+//            String key = name.toString();
+//            String value = taskList.get(name).toString();
+//            System.out.println(key + value);
+//
+//        }
+//    @Override
+//    public String toString() {
+//               String str = "";
+//                for (Map.Entry<Integer, Task> entry : taskList.entrySet()) {
+//                    str = entry.getKey() + "=" + entry.getValue();
+//                }
+//                return str;
+//for ()
+    //    return "id=" + taskList.keySet() + "" + taskList.set();
+
+    //  }
+
 
     public String report() {
 //?????

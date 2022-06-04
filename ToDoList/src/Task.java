@@ -7,7 +7,7 @@ public class Task {
 
     static int nextId = 1;
     int id;
-    Calendar date;
+    GregorianCalendar date;
     String text;
     String status;
 
@@ -22,11 +22,15 @@ public class Task {
     }
 
     public void setDate(int year, int month, int dayOfMonth) {
-        GregorianCalendar calendar = new GregorianCalendar();
-        calendar.set(Calendar.YEAR, year);
-        calendar.set(Calendar.MONTH, month);
-        calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+        GregorianCalendar date = new GregorianCalendar();
+        date.set(Calendar.YEAR, year);
+        date.set(Calendar.MONTH, month);
+        date.set(Calendar.DAY_OF_MONTH, dayOfMonth);
 
+    }
+
+    public Calendar getDate() {
+        return date;
     }
 
     public String getText() {
@@ -47,5 +51,10 @@ public class Task {
     public void setStatus(String s) {
 
         status = s;
+    }
+
+    @Override
+    public String toString() {
+        return getId() + getText();
     }
 }

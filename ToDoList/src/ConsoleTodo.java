@@ -1,8 +1,5 @@
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.Scanner;
+import java.util.*;
 
 public class ConsoleTodo {
     public static void main(String[] args) {
@@ -48,6 +45,7 @@ public class ConsoleTodo {
                     taskList.printTaskList();
                     break;
             }
+
         }
     }
 }
