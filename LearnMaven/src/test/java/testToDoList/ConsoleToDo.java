@@ -2,6 +2,7 @@ package testToDoList;
 
 import ToDoList.Task;
 import ToDoList.TaskList;
+import org.apache.commons.lang3.StringUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -49,6 +50,10 @@ class ConsoleTodo {
                 case "Вывести весь список задач":
                     taskList.printTaskList();
                     break;
+            }
+               if (StringUtils.isEmpty(choice)){
+                   System.out.println("Введите команду");
+
             }
 
         }
