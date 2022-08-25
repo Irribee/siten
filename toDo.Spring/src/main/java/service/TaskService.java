@@ -28,7 +28,8 @@ public class TaskService {
         }
         return taskEntity;
     }
-    public Task delete (Integer id){
+
+    public Integer delete(Integer id) {
         listRepo.deleteById(id);
         return id;
     }

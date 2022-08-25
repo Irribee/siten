@@ -13,11 +13,12 @@ public class ToDoEntity {
     String text;
     String status;
     @OneToOne
-            @JoinColumn(name="task_id")
-TaskEntity task;
-public ToDoEntity(){
+    @JoinColumn(name = "task_id")
+    TaskEntity task;
 
-}
+    public ToDoEntity() {
+
+    }
 
     public void setTask(TaskEntity task) {
         this.task = task;
@@ -32,6 +33,7 @@ public ToDoEntity(){
     }
 
     public void setDate(GregorianCalendar date) {
+
         this.date = date;
     }
 
@@ -55,7 +57,7 @@ public ToDoEntity(){
         return text;
     }
 
-    public boolean getStatus() {
+    public String getStatus() {
         return status;
     }
 }

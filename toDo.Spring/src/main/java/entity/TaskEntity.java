@@ -15,8 +15,10 @@ public class TaskEntity {
     GregorianCalendar date;
     String text;
     String status;
-    @OneToOne(cascade = CascadeType.ALL, mappedBy ="task")//каскад-если удаляем задачу, то удаляется все, что касается задачи
+    @OneToOne(cascade = CascadeType.ALL)
+//каскад-если удаляем задачу, то удаляется все, что касается задачи
     private List<ToDoEntity> toDoe;
+
     public TaskEntity() {
 
     }
@@ -66,6 +68,7 @@ public class TaskEntity {
 
     @Override
     public String toString() {
+
         return getId() + getText();
     }
 }
